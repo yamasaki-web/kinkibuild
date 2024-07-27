@@ -1,0 +1,505 @@
+@charset "utf-8";
+@use "../foundation/mixins" as *;
+
+/* ============================================
+// selling
+// ==========================================*/
+.lower-selling {
+  background: $bg-color;
+
+  .l-main {
+    @include mq(pc) {
+      min-height: calc(1080px - 72px - 380px - 34px);
+    }
+  }
+
+
+  .selling {
+    &__inner {
+      padding-top: 48px;
+      padding-bottom: 64px;
+
+      @include mq(sp) {
+        padding-top: 24px;
+        padding-bottom: 32px;
+      }
+    }
+
+    &__content {
+      .property {
+        background: #fff;
+        padding: 24px 32px;
+        margin-top: 24px;
+
+        @include mq(sp) {
+          padding: 24px 4.25%;
+          margin-top: 16px;
+        }
+
+        &:nth-child(n+2 of .property) {
+          margin-top: 40px;
+        }
+
+        &__head {
+          display: flex;
+          align-items: flex-start;
+
+          @include mq(sp) {
+            flex-direction: column;
+          }
+
+          .img {
+            flex: 1;
+            max-width: 144px;
+            border-radius: 5px;
+            overflow: hidden;
+
+            @include mq(sp) {
+              margin-inline: auto;
+            }
+
+            img {
+              aspect-ratio: 4 / 3;
+            }
+          }
+
+          .infoWrap {
+            flex: 1;
+            line-height: 1.6;
+            margin-left: 16px;
+
+            @include mq(sp) {
+              width: 100%;
+              margin-left: 0;
+            }
+
+            .name {
+              font-size: 1.8rem;
+              font-weight: bold;
+              padding: 0 16px;
+              line-height: 1.5;
+              margin-top: 16px;
+
+              @include mq(sp) {
+                padding: 0;
+                font-size: 1.5rem;
+                padding: 8px 3.25%;
+                margin-top: 16px;
+              }
+            }
+
+            .info {
+              display: flex;
+              align-items: stretch;
+              padding: 8px 16px;
+              border-top: 1px dotted $border-color;
+              border-bottom: 1px dotted $border-color;
+              gap: 16px;
+
+              @include mq(sp) {
+                flex-direction: column;
+                gap: 0;
+                padding: 0;
+              }
+            }
+
+            .address {
+              width: 100%;
+              max-width: 400px;
+
+              @include mq(sp) {
+                max-width: 100%;
+                padding: 8px 3.25%;
+              }
+            }
+
+            .distance {
+              width: 100%;
+              max-width: 320px;
+
+              @include mq(sp) {
+                max-width: 100%;
+                padding: 8px 3.25%;
+              }
+            }
+
+            .distance,
+            .age {
+              border-left: 1px dotted $border-color;
+              padding-left: 16px;
+
+              @include mq(sp) {
+                border-left: none;
+                border-top: 1px dotted $border-color;
+                padding: 8px 3.25%;
+              }
+            }
+          }
+        }
+
+        &__body {
+          margin-top: 24px;
+
+          &__content {
+            &:nth-child(n+2 of .property__body__content) {
+              margin-top: 24px;
+            }
+
+            &__head {
+              display: flex;
+              border-left: 3px solid $primary-color;
+
+              @include mq(sp) {
+                flex-direction: column;
+                border-left: 2px solid #a9894a;
+              }
+
+              .imgArea {
+                position: relative;
+                max-width: 144px;
+                border-radius: 5px;
+                overflow: hidden;
+                cursor: pointer;
+                margin-left: 16px;
+
+                @include mq(sp) {
+                  margin-inline: auto;
+                }
+
+                &::before {
+                  content: "";
+                  display: block;
+                  position: absolute;
+                  bottom: 4px;
+                  right: 4px;
+                  width: 24px;
+                  aspect-ratio: 1/1;
+                  mask: url(../img/selling/lupe.png)center center /contain no-repeat;
+                  background: #fff;
+                  z-index: 2;
+                }
+
+                &::after {
+                  content: "";
+                  display: block;
+                  position: absolute;
+                  bottom: 4px;
+                  right: 4px;
+                  width: 24px;
+                  aspect-ratio: 1/1;
+                  background: $primary-color;
+                  border-radius: 50%;
+                  z-index: 1;
+                }
+
+                img {
+                  aspect-ratio: 4 / 3;
+                }
+              }
+
+              .list {
+                position: relative;
+                display: flex;
+                align-items: stretch;
+                padding: 0 32px 0 16px;
+                cursor: pointer;
+                border-bottom: 1px solid $border-color;
+                flex: 1;
+
+                @include mq(sp) {
+                  flex-direction: column;
+                  padding: 16px 24px 8px 4.25%;
+                  border-bottom: none;
+                }
+
+                &::before {
+                  content: "";
+                  display: block;
+                  position: absolute;
+                  top: 50%;
+                  right: 0;
+                  line-height: 1;
+                  width: 8px;
+                  aspect-ratio: 1/1;
+                  border: 2px solid $primary-color;
+                  border-left: 0;
+                  border-bottom: 0;
+                  transform: translateY(-50%) rotate(135deg);
+                  transition: 0.3s;
+
+                  @include mq(sp) {
+                    right: 1px;
+                  }
+                }
+
+                &__item {
+                  flex: 1;
+                  display: flex;
+                  flex-direction: column;
+
+                  .term {
+                    background-color: #f5efe2;
+                    padding: 4px 24px;
+                    text-align: center;
+
+                    @include mq(sp) {
+                      padding: 2px 24px;
+                    }
+                  }
+
+                  .desc {
+                    padding: 8px 24px;
+                    flex: 1;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    @include mq(sp) {
+                      padding: 6px 24px;
+                    }
+                  }
+                }
+              }
+            }
+
+            .detailInfo {
+              display: grid;
+              grid-template-rows: 0fr;
+              transition: 0.3s;
+
+              @include mq(sp) {
+                border-bottom: 1px solid $border-color;
+              }
+
+              &__table {
+                overflow: hidden;
+
+                .row {
+                  width: 100%;
+
+                  @include mq(sp) {
+                    display: flex;
+                    flex-direction: column;
+                  }
+
+                  .head {
+                    background-color: $bg-color;
+                    border: solid 1px $border-color;
+                    width: 15%;
+                    line-height: 1.6;
+                    padding: 16px;
+
+                    @include mq(sp) {
+                      width: 100%;
+                      padding: 8px 16px;
+                    }
+                  }
+
+                  .data {
+                    border: solid 1px $border-color;
+                    padding: 5px;
+                    line-height: 1.6;
+                    padding: 16px;
+                    width: 35%;
+
+                    @include mq(sp) {
+                      width: 100%;
+                      padding: 10px 16px;
+                      border: none;
+                    }
+                  }
+                }
+              }
+            }
+
+            &.-open {
+              .list {
+                &::before {
+                  transform: translateY(-50%) rotate(315deg);
+                }
+              }
+
+              .detailInfo {
+                grid-template-rows: 1fr;
+                margin-top: 16px;
+              }
+            }
+
+
+          }
+        }
+      }
+    }
+  }
+
+  // モーダル
+  .iziModal {
+    @include mq(sp) {
+      width: 70%;
+    }
+
+    &-wrap {
+      position: relative;
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #fff;
+        z-index: -1;
+        width: 120%;
+        height: 120%;
+        border-radius: 20px;
+
+        @include mq(sp) {
+          width: 110%;
+          height: 110%;
+          border-radius: 10px;
+        }
+      }
+
+      .iziModal-content {
+        .closeBotton {
+          position: absolute;
+          width: 40px;
+          aspect-ratio: 1/1;
+          top: -54px;
+          right: -76px;
+          border-radius: 50%;
+          border: 1px solid $border-color;
+          background: #fff;
+
+          @include mq(sp) {
+            width: 24px;
+            top: -22px;
+            right: -28px;
+          }
+
+          &::before,
+          &::after {
+            content: "";
+            position: absolute;
+            display: block;
+            top: 50%;
+            left: 50%;
+            width: 16px;
+            height: 2px;
+            background: $border-color;
+
+            @include mq(sp) {
+              width: 10px;
+            }
+          }
+
+          &::before {
+            transform: translate(-50%, -50%) rotate(45deg);
+          }
+
+          &::after {
+            transform: translate(-50%, -50%) rotate(-45deg);
+          }
+        }
+      }
+    }
+  }
+
+  .iziModal-navigate {
+    &-caption {
+      display: none !important;
+    }
+
+    &>button {
+      top: 51%;
+      height: 0;
+      background: none;
+      opacity: 1;
+    }
+
+    &-prev,
+    &-next {
+      &::before {
+        content: '';
+        display: block;
+        width: 48px;
+        aspect-ratio: 1/1;
+        background: $primary-color;
+        border-radius: 50%;
+        position: absolute;
+        top: -24px;
+
+        @include mq(sp) {
+          width: 32px;
+        }
+      }
+
+      &::after {
+        content: '';
+        width: 16px;
+        height: 16px;
+        border: 2px solid #fff;
+        transform: rotate(-45deg);
+        transform-origin: top left;
+        position: absolute;
+        top: 50%;
+
+        @include mq(sp) {
+          width: 8px;
+          height: 8px;
+        }
+      }
+    }
+
+    &-prev {
+      margin-left: -410px !important;
+
+      @include mq(sp) {
+        margin-left: -48% !important;
+      }
+
+      &::before {
+        left: -16px;
+
+        @include mq(sp) {
+          left: 0;
+        }
+      }
+
+      &::after {
+        border-right: 0;
+        border-bottom: 0;
+        left: -2px;
+
+        @include mq(sp) {
+          left: 11px;
+          top: -7px;
+        }
+      }
+    }
+
+    &-next {
+      margin-right: -410px !important;
+
+      @include mq(sp) {
+        margin-right: -44% !important;
+      }
+
+      &::before {
+        right: -16px;
+      }
+
+      &::after {
+        border-left: 0;
+        border-top: 0;
+        right: 6px;
+
+        @include mq(sp) {
+          right: -1px;
+          top: -8px;
+        }
+      }
+    }
+  }
+}

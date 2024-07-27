@@ -1,0 +1,55 @@
+@charset "utf-8";
+@use "../foundation/mixins" as *;
+
+/* ============================================
+// reform
+// ==========================================*/
+.lower-reform {
+  background: $bg-color;
+
+  .l-main {
+    @include mq(pc) {
+      min-height: calc(1080px - 72px - 380px - 34px);
+    }
+  }
+}
+
+.reform {
+  &__inner {
+    padding-top: 48px;
+    padding-bottom: 64px;
+
+    @include mq(sp) {
+      padding-top: 24px;
+      padding-bottom: 32px;
+    }
+  }
+
+  &__content {
+    .list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px;
+      margin-top: 32px;
+
+      @include mq(sp) {
+        margin-top: 24px;
+        gap: 24px;
+      }
+
+      &__item {
+        .imgArea {
+          img {
+            aspect-ratio: 3/2;
+          }
+        }
+        .textArea{
+          margin-top: 8px;
+          @include mq(sp){
+          margin-top: 4px;
+          }
+        }
+      }
+    }
+  }
+}

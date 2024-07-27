@@ -1,0 +1,176 @@
+@charset "utf-8";
+@use "../foundation/mixins" as *;
+
+/* ============================================
+// HEADER
+// ==========================================*/
+.header {
+  background: #fff;
+  @include mq(sp){
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 40px;
+    height: 72px;
+    @include mq(sp){
+      height: 56px;
+      padding-left: 4.25%;
+    }
+  }
+
+  &__logo {
+    h1 {
+      a {
+        display: flex;
+        align-items: center;
+        img{
+          height: 26px;
+          @include mq(sp){
+            height: 18px;
+          }
+        }
+      }
+    }
+  }
+
+  &__navWrap{
+@include mq(sp){
+  display: none;
+}
+  }
+
+  &__nav {
+    &__list {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+
+      &__item {
+        position: relative;
+
+        >a,
+        .noLink {
+          position: relative;
+          color: $txt-color;
+          transition: all 0.3s;
+          font-weight: 600;
+
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            background: $primary-color;
+            height: 2px;
+            width: 100%;
+            transform: scale(0, 1);
+            transform-origin: right top;
+            transition: transform 0.3s;
+          }
+
+          @include mq(hover) {
+            &:hover {
+              color: $primary-color;
+
+              &::after {
+                transform: scale(1, 1);
+                transform-origin: left top;
+              }
+            }
+          }
+        }
+
+        &.pullDown__trigge {
+          @include mq(hover) {
+            &:hover {
+              .pullDown {
+                // transform: translate(-50%, 0);
+                opacity: 1;
+                pointer-events: auto;
+
+                &::before {
+                  transform: scale(0, 1);
+                  transform-origin: right top;
+                }
+
+              }
+            }
+          }
+        }
+
+        .pullDown {
+          position: relative;
+          width: 184px;
+          min-width: 100%;
+          position: absolute;
+          left: 50%;
+          top: 100%;
+          z-index: 2;
+          transform: translate(-50%, 0);
+          opacity: 0;
+          pointer-events: none;
+          transition: transform 1s cubic-bezier(0.14, 1, 0.34, 1), opacity 1s cubic-bezier(0.14, 1, 0.34, 1);
+          padding-top: 16px;
+
+          &::before {
+            content: "";
+            background: $primary-color;
+            position: absolute;
+            width: 100%;
+            height: calc(100% - 16px);
+            top: 0;
+            left: 0;
+            z-index: 1;
+            transition: transform 0.3s;
+            transform: scale(1, 1);
+            transform-origin: left top;
+            margin-top: 16px;
+          }
+
+          @include mq(sp) {
+            width: 150px;
+          }
+
+          &__list {
+
+            &__item {
+              border-bottom: 1px solid rgb(255 255 255/0.6);
+
+              &:last-child {
+                border-bottom: none;
+              }
+
+              a {
+                background: $primary-color;
+                color: #fff;
+                display: flex;
+                justify-content: center;
+                transition: all 0.3s;
+                padding: 12px 8px;
+
+                @include mq(hover) {
+                  &:hover {
+                    opacity: 1;
+                    background: #fff;
+                    color: $primary-color;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .noLink {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

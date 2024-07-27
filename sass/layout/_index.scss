@@ -1,0 +1,361 @@
+@charset "utf-8";
+@use "../foundation/mixins" as *;
+
+/* ============================================
+// INDEX
+// ==========================================*/
+
+/*--------------------
+  mainVisual
+--------------------*/
+.mainVisual {
+  position: relative;
+  height: calc(100vh - 72px);
+  max-height: 1080px;
+
+  @include mq(sp) {
+    max-height: 400px;
+    margin-top: 56px;
+  }
+
+  &__copy {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-shadow: 0 0 15px #666;
+    text-align: center;
+    width: 100%;
+
+    .mainCopy,
+    .subCopy {
+      text-shadow: 0 0 8px $txt-color;
+      color: #fff;
+    }
+
+    .mainCopy {
+      font-size: 3.8rem;
+      line-height: 1.5;
+      .word
+      {
+        display: inline-block;
+        opacity: 0;
+      }
+
+      @include mq(sp) {
+        font-size: 2.6rem;
+      }
+    }
+
+    .subCopy {
+      font-size: 2rem;
+      line-height: 2;
+      margin-top: 8px;
+      width: 100%;
+      opacity: 0;
+
+      @include mq(sp) {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  .js-loaded &{
+    .mainCopy {
+            @for $i from 1 through 30 {
+              .word:nth-child(#{$i}) {
+                animation: -fadeup 800ms cubic-bezier(0.14, 1, 0.34, 1) (0.8s + $i * 60ms) forwards;
+              }
+            }
+    }
+    .subCopy{
+      animation: -fadeLeft 800ms cubic-bezier(0.14, 1, 0.34, 1) 1.2s forwards;
+    }
+  }
+
+  &__inner {
+    position: fixed;
+    z-index: -1;
+    inset: 0;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgb(255 255 255 /0.1);
+    }
+  }
+
+  &__movie {
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 177.77777778vh;
+    /* 16:9 の幅→16 ÷ 9＝ 177.77% */
+    height: 56.25vw;
+    /* 16:9の幅 → 9 ÷ 16 = 56.25% */
+    min-height: 100%;
+    min-width: 100%;
+
+    @include mq(sp) {
+      top: 56px;
+      transform: translate(-50%, 0);
+      width: 100vw;
+      height: 400px;
+    }
+
+    #video {
+      width: 100%;
+      height: 100%;
+      @include mq(sp) {
+        object-fit: cover;
+        width: 100vw;
+        height: 400px;
+      }
+    }
+  }
+}
+
+/*--------------------
+  business
+--------------------*/
+.sec__business {
+  background: $bg-color;
+
+  &__inner {
+    padding-top: 96px;
+
+    @include mq(sp) {
+      padding-top: 48px;
+    }
+  }
+
+  .business {
+    &__content {
+      margin-top: 48px;
+
+      @include mq(sp) {
+        margin-top: 32px;
+      }
+
+      .list {
+        &__item {
+          margin-top: 40px;
+
+          &:first-child {
+            margin-top: 0;
+          }
+
+          @include mq(sp) {
+            margin-top: 24px;
+          }
+
+          a {
+            display: flex;
+            align-items: stretch;
+            background: #fff;
+            flex-direction: row-reverse;
+
+            @include mq(sp) {
+              flex-direction: column-reverse;
+            }
+
+            .textArea {
+              position: relative;
+              flex: 1;
+              padding: 40px;
+
+              @include mq(sp) {
+                padding: 14px 5.25% 16px;
+              }
+
+              &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                bottom: 24px;
+                right: 32px;
+                border-top: 2px solid $txt-color;
+                border-right: 2px solid $txt-color;
+                border-bottom: transparent;
+                border-left: transparent;
+                width: 8px;
+                aspect-ratio: 1/1;
+                transform: rotate(45deg);
+                transition: transform 0.3s;
+
+                @include mq(sp) {
+                  bottom: 16px;
+                  right: 24px;
+                  border-width: 1px;
+                  width: 6px;
+                }
+              }
+
+              .title {
+                position: relative;
+                font-family: $lato;
+                font-size: 1.8rem;
+                font-weight: 700;
+                letter-spacing: 0.075em;
+                color: $txt-color;
+                transition: color 0.3s;
+
+                @include mq(sp) {
+                  font-size: 1.6rem;
+                }
+
+                &::after {
+                  content: "";
+                  display: block;
+                  height: 1px;
+                  margin-top: 8px;
+                  transform: scale(0.05, 1);
+                  transform-origin: left bottom;
+                  transition: transform 0.3s;
+                  width: 100%;
+                  background: $primary-color;
+
+                  @include mq(sp) {
+                    margin-top: 4px;
+                  }
+                }
+              }
+
+              .lead {
+                color: $txt-color;
+                margin-top: 12px;
+
+                @include mq(sp) {
+                  margin-top: 8px;
+                }
+              }
+            }
+
+            .imgArea {
+              max-width: 400px;
+              overflow: hidden;
+
+              @include mq(sp) {
+                margin-inline: auto;
+              }
+
+              img {
+                aspect-ratio: 400/280;
+                transition: transform 0.3s;
+              }
+            }
+
+            @include mq(hover) {
+              &:hover {
+                opacity: 1;
+
+                .textArea {
+                  &::before {
+                    transform: rotate(45deg) translate(8px, -8px);
+                  }
+
+                  .title {
+                    color: $primary-color;
+
+                    &::after {
+                      transform: scale(1, 1);
+                    }
+                  }
+                }
+
+                .imgArea {
+                  img {
+                    transform: scale(1.05);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+/*--------------------
+  access
+--------------------*/
+.sec__access {
+  background: $bg-color;
+
+  &__inner {
+    padding-top: 96px;
+    padding-bottom: 80px;
+
+    @include mq(sp) {
+      padding-top: 48px;
+      padding-bottom: 48px;
+    }
+  }
+
+  .access {
+    &__content {
+      margin-top: 48px;
+
+      @include mq(sp) {
+        margin-top: 32px;
+      }
+
+      .list {
+        background: #fff;
+        padding: 24px 32px 20px;
+
+        @include mq(sp) {
+          padding: 16px 6.25%;
+        }
+
+        &__item {
+          display: flex;
+          border-top: 1px solid rgb($color: $primary-color, $alpha: 0.4);
+          margin-top: 20px;
+          padding-top: 16px;
+
+          @include mq(sp) {
+            flex-direction: column;
+            margin-top: 12px;
+            padding-top: 8px;
+          }
+
+          &:first-child {
+            margin-top: 0;
+            border-top: none;
+            padding-top: 0;
+          }
+
+          .term {
+            max-width: 112px;
+            width: 100%;
+            margin-top: 16px;
+            color: $primary-color;
+            font-weight: 500;
+
+            &:first-child {
+              margin-top: 0;
+            }
+          }
+        }
+      }
+
+      iframe {
+        @include mq(sp) {
+          height: 280px;
+        }
+      }
+    }
+  }
+}

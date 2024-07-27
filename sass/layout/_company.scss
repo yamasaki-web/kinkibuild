@@ -1,0 +1,61 @@
+@charset "utf-8";
+@use "../foundation/mixins" as *;
+
+/* ============================================
+// company
+// ==========================================*/
+.lower-company {
+  background: $bg-color;
+
+  .l-main {
+    @include mq(pc) {
+      min-height: calc(1080px - 72px - 380px - 34px);
+    }
+  }
+}
+
+.company {
+  &__inner {
+    max-width: 1180px;
+    padding-top: 56px;
+    padding-bottom: 64px;
+
+    @include mq(sp) {
+      padding-top: 24px;
+      padding-bottom: 32px;
+    }
+  }
+
+  &__content {
+    .list {
+      &__item {
+        display: flex;
+        border-bottom: 1px solid $primary-color;
+        gap: 16px;
+        padding: 24px 0;
+
+        &:first-child {
+          border-top: 1px solid $primary-color;
+        }
+
+        @include mq(sp) {
+          flex-direction: column;
+          padding: 8px 0;
+          gap: 8px;
+        }
+
+        .term {
+          flex: 0 0 304px;
+          text-align: center;
+          font-weight: 700;
+
+          @include mq(sp) {
+            flex: 1;
+            border-bottom: 1px solid rgba($border-color, 0.3);
+            padding-bottom: 8px;
+          }
+        }
+      }
+    }
+  }
+}

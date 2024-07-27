@@ -1,0 +1,276 @@
+@charset "utf-8";
+@use "../foundation/mixins" as *;
+
+/* ============================================
+// FOOTER
+// ==========================================*/
+.footer {
+  background: #333;
+
+  &__inner {
+    padding-top: 64px;
+    padding-bottom: 64px;
+    @include mq(sp){
+      padding-top: 40px;
+    padding-bottom: 40px;
+    }
+  }
+
+  &__info__content{
+    display: flex;
+    align-items: flex-start;
+    gap: 6%;
+    margin-top: 32px;
+    justify-content: space-between;
+    @include mq(sp) {
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__logo {
+    height: 26px;
+    aspect-ratio: 477 / 52;
+    @include mq(sp) {
+      height: 18px;
+    }
+    a{
+      display: flex;
+    }
+  }
+
+  &__info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 8px;
+    .address{
+      font-size: 1.5rem;
+      font-weight: 400;
+      letter-spacing: 0.075em;
+      color: #fff;
+      @include mq(sp) {
+        font-size: 1.4rem;
+      }
+    }
+    .tel{
+      a{
+      font-size: 1.5rem;
+      font-weight: 400;
+      letter-spacing: 0.075em;
+      color: #fff;
+      @include mq(sp) {
+        font-size: 1.4rem;
+      }
+      }
+    }
+    .fax,.email{
+      font-size: 1.5rem;
+      font-weight: 400;
+      letter-spacing: 0.075em;
+      color: #fff;
+      @include mq(sp) {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  &__sns {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    @include mq(sp){
+      gap: 14.5px;
+    }
+    .icon{
+      a{
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        color: #fff;
+        @include mq(sp){
+          gap: 12px;
+        }
+        @include mq(hover){
+          &:hover{
+            color: $primary-color;
+            &::before{
+              background: $primary-color;
+            }
+          }
+        }
+        &::before{
+          content: "";
+          display: flex;
+          mask: url(../img/common/instagram_logo_white.png)center center /contain no-repeat;
+          background: #fff;
+          width: 29px;
+          aspect-ratio: 1/1;
+          transition: background 0.3s;
+      }
+    }
+    }
+  }
+
+  &__navWrap{
+    flex: 1;
+  }
+
+    &__nav {
+      width: 100%;
+      &__list {
+        display: flex;
+        align-items: stretch;
+        gap: 8px 16px;
+        @include mq(sp) {
+          flex-direction: column;
+          gap: 0;
+        }
+
+        &__item {
+          position: relative;
+          color: #fff;
+          padding-left: 24px;
+          flex: 1;
+          @include mq(sp) {
+            display: flex;
+            align-items: flex-start;
+            gap: 9%;
+            padding-left: 0;
+            border-top: 1px solid rgb(255 255 255/0.3);
+            padding: 8px 0;
+            &:first-child{
+              border-top: none;
+              padding-top: 0;
+            }
+            &:last-child{
+              padding-bottom: 0;
+            }
+          }
+          &::before{
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1px;
+            height: 100%;
+            background :#fff;
+            opacity: 0.3;
+            @include mq(sp) {
+              content: none;
+            }
+          }
+          .text{
+            @include mq(sp) {
+              flex: 0 0 120px;
+            }
+            }
+          a {
+            position: relative;
+            color: #fff;
+
+            @include mq(hover) {
+              &:hover {
+                opacity: 1;
+                color: $primary-color;
+              }
+            }
+          }
+        }
+      }
+    }
+    &__child{
+      &__list{
+        margin-top: 4px;
+        @include mq(sp) {
+          margin-top:0;
+        }
+        &__item{
+          a{
+            position: relative;
+            padding-left: 16px;
+            &::before{
+              content: "";
+              display: block;
+              position: absolute;
+              top: 11px;
+              left: 0;
+              width: 8px;
+              aspect-ratio: 8/1;
+              background: #fff;
+              transition: background 0.3s;
+            }
+          }
+        }
+      }
+    }
+
+  &__copyright {
+    background: #2a2a2a;
+    color: #fff;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 8px 0;
+  }
+}
+
+/* ============================================
+// PAGETOP
+// ==========================================*/
+.pagetop {
+  position: fixed;
+  right: 0px;
+  bottom: 35px;
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s;
+  transform: rotate(90deg);
+  mix-blend-mode: difference;
+
+  @include mq(sp) {
+    width: 80px;
+    right: -16px;
+  }
+
+  .js-scrolled & {
+    opacity: 1;
+    pointer-events: visible;
+  }
+
+  a {
+    position: relative;
+    display: flex;
+    color: #fff;
+    font-size: 1.3rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: calc(100% + 8px);
+      transform: translate(0,-50%);
+      background: #fff;
+      height: 1px;
+      width: 100%;
+      transform: scale(1, 1);
+      transform-origin: right top;
+      transition: transform 0.3s;
+      @include mq(sp){
+        width: 40%;
+      }
+    }
+
+    @include mq(hover){
+      &:hover{
+        opacity: 1;
+          &::before {
+            transform: scale(0, 1);
+            transform-origin: left top;
+          }
+        }
+    }
+  }
+}

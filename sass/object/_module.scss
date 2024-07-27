@@ -1,0 +1,354 @@
+@charset "utf-8";
+@use "../foundation/mixins" as *;
+// @include mq(sp)
+// @media screen and (max-width: 1200px)
+
+/* ============================================
+// MODULES
+// ==========================================*/
+
+/*--------------------
+	pageHeader
+--------------------*/
+.pageHeader {
+  position: relative;
+
+  @include mq(sp) {
+    padding-top: 56px;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    inset: 0;
+    background: rgb(255 255 255/0.6);
+  }
+
+  &__inner {
+    position: relative;
+    overflow: hidden;
+    min-height: 380px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include mq(sp) {
+      min-height: 160px;
+    }
+
+    .pageHeader__content{
+      max-width: 1280px;
+      padding: 80px 40px;
+      @include mq(sp){
+        padding: 40px 6.25%;
+      }
+    }
+
+    .pageHeaderImg {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      filter: blur(60px);
+      transition: 0.4s;
+    }
+
+    .pageHeaderTitle {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+        @include mq(sp) {
+          gap: 4px;
+        }
+      .eng {
+        display: flex;
+        justify-content: center;
+        font-size: 1.4rem;
+        font-weight: 700;
+        letter-spacing: 0.075em;
+        line-height: 1.1;
+        text-shadow: 0 0 8px #fff;
+        color: $txt-color;
+        opacity: 0;
+        color: $primary-color;
+
+        @include mq(sp) {
+          font-size: 1.3rem;
+        }
+      }
+      .ja {
+        font-family: "Lato", sans-serif;
+        font-size: 3.2rem;
+        font-weight: 700;
+        letter-spacing: 0.075em;
+        color: $txt-color;
+        line-height: 1.1;
+        text-shadow: 0 0 8px #fff;
+
+        .word {
+          display: inline-block;
+          opacity: 0;
+        }
+
+        @include mq(sp) {
+          font-size: 2.4rem;
+          font-weight: 700;
+        }
+      }
+    }
+
+    .pageHeaderIntro{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      margin-top: 48px;
+      @include mq(sp){
+        margin-top: 24px;
+        gap: 24px;
+      }
+
+      .title{
+        position: relative;
+        font-size: 2rem;
+        font-weight: 500;
+        letter-spacing: 0.075em;
+        line-height: 1.6;
+        opacity: 0;
+        @include mq(sp){
+          font-size: 1.6rem;
+        }
+        &::before{
+          content: "";
+          display: block;
+          position: absolute;
+          bottom: -8px;
+          left: 50%;
+          transform: translateX(-50%);
+          background: $primary-color;
+          width: 80px;
+          aspect-ratio: 80/1;
+          @include mq(sp){
+            bottom: -14px;
+          }
+        }
+      }
+      .lead{
+        opacity: 0;
+      }
+    }
+  }
+  &.-business{
+    &::before {
+      background: rgb(255 255 255/0.8);
+    }
+    .pageHeader__inner{
+      min-height: 480px;
+      @include mq(sp){
+        min-height: 304px;
+      }
+    }
+  }
+}
+
+.js-loaded {
+  .pageHeader {
+    &__inner {
+      .pageHeaderImg {
+        filter: blur(0);
+      }
+
+      .pageHeaderTitle {
+        .ja {
+          @for $i from 1 through 30 {
+            .word:nth-child(#{$i}) {
+              animation: -fadeup 800ms cubic-bezier(0.14, 1, 0.34, 1) (0.8s + $i * 60ms) forwards;
+            }
+          }
+        }
+
+        .eng {
+          animation: -fadeLeft 800ms cubic-bezier(0.14, 1, 0.34, 1) 0.6s forwards;
+        }
+      }
+      .pageHeaderIntro{
+        .title{animation: -fadeup  800ms cubic-bezier(0.14, 1, 0.34, 1) 1.4s forwards;}
+        .lead{animation: -fadeup  800ms cubic-bezier(0.14, 1, 0.34, 1) 1.6s forwards;}
+      }
+    }
+  }
+}
+
+/*--------------------
+	breadcrumb
+--------------------*/
+.breadcrumb {
+  padding: 12px 40px;
+  background: #fff;
+
+  @include mq(sp) {
+    padding: 8px 16px;
+  }
+
+  &__list {
+    overflow-y: hidden;
+    white-space: nowrap;
+    display: flex;
+    gap: 16px;
+
+    &__item {
+      display: flex;
+      font-size: 1.2rem;
+      gap: 16px;
+
+      @include mq(sp) {
+        font-size: 1.1rem;
+      }
+
+      &::after {
+        content: "\003e";
+      }
+
+      &:last-child {
+        &::after {
+          display: none;
+        }
+      }
+
+      a {
+        color: $txt-color;
+      }
+    }
+  }
+}
+
+/*--------------------
+	commonTitle
+--------------------*/
+.commonTitle01 {
+  text-align: center;
+
+  .eng {
+    display: block;
+    font-family: $lato;
+    font-size: 1.8rem;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    color: $primary-color;
+    line-height: 1.3;
+
+    @include mq(sp) {
+      font-size: 1.3rem;
+    }
+  }
+
+  .ja {
+    font-family: $lato;
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 0.075em;
+    color: $txt-color;
+    line-height: 1.5;
+
+    @include mq(sp) {
+      font-size: 2rem;
+    }
+  }
+}
+
+.lower-commonTitle01 {
+  font-family: "lota";
+  border-bottom: 2px solid $primary-color;
+  color: $txt-color;
+  font-size: 2.2rem;
+  padding-bottom: 8px;
+  line-height: 1.6;
+  font-weight: 700;
+
+  @include mq(sp) {
+    font-size: 1.7rem;
+    padding-bottom: 2px;
+  }
+}
+
+/*--------------------
+	commonBtn
+--------------------*/
+.commonBtn01 {
+  display: block;
+  width: 320px;
+  margin-inline: auto;
+  margin-top: 72px;
+
+  @include mq(sp) {
+    width: 260px;
+    margin-top: 32px;
+  }
+
+  a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 23px 64px;
+    background: $primary-color;
+    border: 1px solid $primary-color;
+    border-radius: 300px;
+    gap: 18px;
+
+    @include mq(sp) {
+      padding: 18px 16px;
+    }
+
+    .arrowIcon {
+      content: "";
+      display: flex;
+      width: 24px;
+      aspect-ratio: 1/1;
+      background: url(../img/common/ico_arrow01_white.png) center center / contain no-repeat;
+      transition: background 0.3s;
+
+      @include mq(sp) {
+        width: 20px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    .btnTxt {
+      font-size: 1.5rem;
+      font-weight: bold;
+      letter-spacing: 0.075em;
+      color: #ffffff;
+      line-height: 1.6;
+
+      @include mq(sp) {
+        font-size: 1.4rem;
+      }
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        background: #fff;
+
+        .btnTxt {
+          color: $primary-color;
+        }
+
+        .arrowIcon {
+          background: url(../img/common/ico_arrow01_color.png) center center / contain no-repeat;
+        }
+
+        &::before {
+          transform: translate(-4px, -4px);
+          border: 1px solid $primary-color;
+        }
+      }
+    }
+  }
+}
