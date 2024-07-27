@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="" />
+  <script>
+    var metalist = document.getElementsByTagName("meta");
+    var ua = navigator.userAgent;
+    for (var i = 0; i < metalist.length; i++) {
+      var name = metalist[i].getAttribute("name");
+      if (name && name.toLowerCase() === "viewport") {
+        if (
+          ua.indexOf("iPhone") > 0 ||
+          (ua.indexOf("Android") > 0 && ua.indexOf("Mobile") > 0)
+        ) {
+          metalist[i].setAttribute("content", "width=device-width");
+          break;
+        } else {
+          metalist[i].setAttribute("content", "width=1180px");
+          break;
+        }
+      }
+    }
+  </script>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <title>株式会社近畿ビルド</title>
+
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="author" content="" />
+
+  <meta name="robots" content="noindex" />
+  <meta name="robots" content="nofollow" />
+  <meta name="robots" content="noarchive" />
+
+  <!-- SNS -->
+  <meta property="og:title" content="" />
+  <meta property="og:site_name" content="" />
+  <meta property="og:description" content="" />
+  <meta property="og:image" content="https://job-gear.jp/●/●●/●●●●●●/img/social.png" />
+  <meta property="og:url" content="https://job-gear.jp/●/●●/●●●●●●/" />
+
+  <link rel="shortcut icon" type="image/x-icon" href="https://job-gear.jp/●/●●/●●●●●●/img/favicon.ico" />
+  <link rel="apple-touch-icon" href="https://job-gear.jp/●/●●/●●●●●●/img/apple-touch-icon.png" />
+
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@100..900&family=Noto+Sans+JP:wght@400;500;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- style -->
+  <!-- 固有 -->
+  <!-- 共通 -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/add.css" />
+</head>
+
+<body class="front-page">
+   <!-- ローディング（TOPのみ） -->
+   <div id="loading">
+    <!-- <div class="circle-spin"></div> -->
+    <div class="logo">
+      <img src="img/common/logo.png" alt="近畿ビルド株式会社" height="27">
+    </div>
+  </div>
+
+  <!-- ハンバーガーメニュー -->
+  <div class="hamburger__btn -hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <div class="hamburger">
+    <div class="hamburger__menu">
+      <div class="hamburger__menu__inner">
+        <div class="hamburger__menu__nav">
+          <div class="hamburger__menu__logo">
+            <a href="index.htm">
+              <img src="img/common/logo.png" width="" alt="株式会社近畿ビルド" />
+            </a>
+          </div>
+          <ul class="hamburger__menu__nav__list">
+            <li class="hamburger__menu__nav__list__item accordion-item">
+                <span class="text noLink accordion-header">不動産事業</span>
+                <div class="pullDown accordion-content">
+                  <ul class="pullDown__list">
+                    <li class="pullDown__list__item">
+                      <a href="rental.htm">
+                        <span class="text">賃貸事業</span>
+                      </a>
+                    </li>
+                    <li class="pullDown__list__item">
+                      <a href="selling.htm">
+                        <span class="text">売買事業</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+            </li>
+            <li class="hamburger__menu__nav__list__item">
+              <a href="reform.htm" class="link">
+                <span class="text">リフォーム事業</span>
+              </a>
+            </li>
+            <li class="hamburger__menu__nav__list__item accordion-item">
+                <span class="text noLink accordion-header">その他事業</span>
+                <div class="pullDown accordion-content">
+                  <ul class="pullDown__list">
+                    <li class="pullDown__list__item">
+                      <a href="kitchen.htm">
+                        <span class="text">レンタルキッチン事業</span>
+                      </a>
+                    </li>
+                    <li class="pullDown__list__item">
+                      <a href="retail.htm">
+                        <span class="text">小売事業</span>
+                      </a>
+                    </li>
+                    <li class="pullDown__list__item">
+                      <a href="lodging.htm">
+                        <span class="text">民泊事業</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+            </li>
+            <li class="hamburger__menu__nav__list__item accordion-item">
+                <span class="text noLink accordion-header">会社案内</span>
+                <div class="pullDown accordion-content">
+                  <ul class="pullDown__list">
+                    <li class="pullDown__list__item">
+                      <a href="message.htm">
+                        <span class="text">代表ご挨拶</span>
+                      </a>
+                    </li>
+                    <li class="pullDown__list__item">
+                      <a href="company.htm">
+                        <span class="text">会社概要</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+            </li>
+            <li class="hamburger__menu__nav__list__item">
+              <a href="link.htm" class="link">
+                <span class="text">リンク</span>
+              </a>
+            </li>
+            <li class="hamburger__menu__nav__list__item">
+              <a href="interview_l.htm" class="link">
+                <span class="text">お問い合わせ</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- //ハンバーガーメニュー -->
+
+  <div id="container">
+    <!-- ヘッダー -->
+    <header class="header">
+      <div class="header__inner">
+        <dev class="header__logo">
+          <h1>
+            <a href="index.htm">
+              <img src="img/common/logo.png" alt="株式会社近畿ビルド" />
+            </a>
+          </h1>
+        </dev>
+        <div class="header__navWrap">
+          <nav class="header__nav">
+            <ul class="header__nav__list">
+              <li class="header__nav__list__item pullDown__trigge">
+                <span class="noLink">不動産事業</span>
+                <div class="pullDown">
+                  <ul class="pullDown__list">
+                    <li class="pullDown__list__item">
+                      <a href="rental.htm">
+                        <span class="text">賃貸事業</span>
+                      </a>
+                    </li>
+                    <li class="pullDown__list__item">
+                      <a href="selling.htm">
+                        <span class="text">売買事業</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="header__nav__list__item">
+                <a href="reform.htm">
+                  <span class="text">リフォーム事業</span>
+                </a>
+              </li>
+              <li class="header__nav__list__item pullDown__trigge">
+                <span class="noLink">その他事業</span>
+                <div class="pullDown">
+                  <ul class="pullDown__list">
+                    <li class="pullDown__list__item">
+                      <a href="kitchen.htm">
+                        <span class="text">レンタルキッチン事業</span>
+                      </a>
+                    </li>
+                    <li class="pullDown__list__item">
+                      <a href="retail.htm">
+                        <span class="text">小売事業</span>
+                      </a>
+                    </li>
+                    <li class="pullDown__list__item">
+                      <a href="lodging.htm">
+                        <span class="text">民泊事業</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="header__nav__list__item pullDown__trigge">
+                <span class="noLink">会社案内</span>
+                <div class="pullDown">
+                  <ul class="pullDown__list">
+                    <li class="pullDown__list__item">
+                      <a href="message.htm">
+                        <span class="text">代表ご挨拶</span>
+                      </a>
+                    </li>
+                    <li class="pullDown__list__item">
+                      <a href="company.htm">
+                        <span class="text">会社概要</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="header__nav__list__item">
+                <a href="link.htm">
+                  <span class="text">リンク</span>
+                </a>
+              </li>
+              <li class="header__nav__list__item">
+                <a href="kyujin_l.htm">
+                  <span class="text">お問い合わせ</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- メインビジュアル -->
+    <div class="mainVisual">
+      <div class="mainVisual__copy">
+        <p class="mainCopy lato split">未来を紡ぐ</p>
+        <p class="subCopy lato">私たちは快適な居住空間を提供し、<br>
+          あなたの暮らしを豊かにし、<br class="spCont">未来への架け橋となります</p>
+      </div>
+      <div class="mainVisual__inner">
+        <div class="mainVisual__movie">
+          <video id="video" poster="img/index/kv.jpg" webkit-playsinline playsinline muted autoplay loop>
+            <source src="img/index/kv.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <main class="main" id="main">
+
+      <!-- 事業内容 -->
+      <section class="sec__business">
+        <div class="sec__business__inner innerWrap">
+          <div class="business__title commonTitle01">
+            <span class="eng anime -fadeInBottom">Business</span>
+            <h2 class="ja anime -fadeInBottom">事業内容</h2>
+          </div>
+          <div class="business__content">
+            <ul class="list">
+              <li class="list__item anime -fadeInBottom">
+                <a href="rental.htm">
+                  <div class="textArea">
+                    <h3 class="title">賃貸事業</h3>
+                    <p class="lead">
+                      賃貸事業では、お客さまのニーズに合った賃貸物件をご紹介し、快適な新生活の実現をサポートします。信頼性と品質を重視し、専門知識を駆使して最適な住まい選びをお手伝いいたします。お客さまの生活スタイルやご要望に応じた物件をご提案し、スムーズな賃貸契約をサポートします。
+                    </p>
+                  </div>
+                  <div class="imgArea">
+                    <img src="img/index/business_pic01.jpg" alt="マンションの写真" class="ofi">
+                  </div>
+                </a>
+              </li>
+              <li class="list__item anime -fadeInBottom">
+                <a href="selling.htm">
+                  <div class="textArea">
+                    <h3 class="title">売買事業</h3>
+                    <p class="lead">
+                      売買事業では、お客さまの理想のマイホームの実現をサポートするために、売買物件のご紹介を行っています。信頼性と品質を重視し、専門知識を駆使して最適な住まい選びをお手伝いいたします。お客さまの希望に合った物件を見つけ出し、購入プロセスをスムーズに進めるためのサポートを提供します。
+                    </p>
+                  </div>
+                  <div class="imgArea">
+                    <img src="img/index/business_pic02.jpg" alt="高層マンションの写真" class="ofi">
+                  </div>
+                </a>
+              </li>
+              <li class="list__item anime -fadeInBottom">
+                <a href="reform.htm">
+                  <div class="textArea">
+                    <h3 class="title">リフォーム事業</h3>
+                    <p class="lead">
+                      リフォーム事業では、お客さまの理想の住まいを実現するためのサポートを提供しています。お客さまのニーズやライフスタイルに合わせた提案を行い、高品質な施工で満足度の高いリフォームを実現します。信頼性と品質を重視し、専門知識を駆使して理想の住空間をお届けいたします。
+                    </p>
+                  </div>
+                  <div class="imgArea">
+                    <img src="img/index/business_pic03.jpg" alt="マンションの写真" class="ofi">
+                  </div>
+                </a>
+              </li>
+              <li class="list__item anime -fadeInBottom">
+                <a href="kitchen.htm">
+                  <div class="textArea">
+                    <h3 class="title">レンタルキッチン事業</h3>
+                    <p class="lead">
+                      レンタルキッチン事業では、料理好きなお客さまや料理教室を運営する方々に向けて、レンタルキッチン事業を展開しています。最新の設備を備えた清潔なキッチンを提供し、料理の創作活動やイベントの開催をサポートします。柔軟な利用プランをご用意し、個人やグループのニーズに応じた快適なキッチンスペースを提供します。
+                    </p>
+                  </div>
+                  <div class="imgArea">
+                    <img src="img/index/business_pic04.jpg" alt="キッチンの写真" class="ofi">
+                  </div>
+                </a>
+              </li>
+              <li class="list__item anime -fadeInBottom">
+                <a href="retail.htm">
+                  <div class="textArea">
+                    <h3 class="title">小売事業</h3>
+                    <p class="lead">
+                      小売事業では、お客さまに高品質な商品をリーズナブルな価格で提供するために、倉庫型スーパー再販店を運営しています。幅広い商品ラインアップを取り揃え、お買い物の楽しさと利便性を提供します。信頼性のある商品を厳選し、お客さまの生活を豊かにするためのサポートをいたします。
+                    </p>
+                  </div>
+                  <div class="imgArea">
+                    <img src="img/index/business_pic05.jpg" alt="パンの写真" class="ofi">
+                  </div>
+                </a>
+              </li>
+              <li class="list__item anime -fadeInBottom">
+                <a href="lodging.htm">
+                  <div class="textArea">
+                    <h3 class="title">民泊事業</h3>
+                    <p class="lead">
+                      民泊事業では、お客さまに快適でユニークな宿泊体験を提供するために、民泊事業を展開しています。厳選された物件を利用して、観光やビジネスで訪れる方々にとって安心して滞在できる環境を提供します。地元の魅力を最大限に活かしたおもてなしと、快適な宿泊施設を通じて、お客さまの旅をサポートします。
+                    </p>
+                  </div>
+                  <div class="imgArea">
+                    <img src="img/index/business_pic06.jpg" alt="民泊の写真" class="ofi">
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- アクセス -->
+      <section class="sec__access">
+        <div class="sec__access__inner innerWrap">
+          <div class="access__title commonTitle01">
+            <span class="eng anime -fadeInBottom">Access</span>
+            <h2 class="ja anime -fadeInBottom">アクセス</h2>
+          </div>
+          <div class="access__content">
+            <dl class="list anime -fadeInBottom">
+              <div class="list__item">
+                <dt class="term">住所</dt>
+                <dd class="desc">〒558-0022 大阪府大阪市住吉区杉本１丁目７−１６</dd>
+              </div>
+              <div class="list__item">
+                <dt class="term">アクセス</dt>
+                <dd class="desc">杉本町駅から徒歩6分
+                </dd>
+              </div>
+            </dl>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.9226945305913!2d135.5051666890765!3d34.59430955064887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000dd003557a669%3A0x1215bdf862a5698d!2zT05FIExJRkUgKOagquW8j-S8muekviDov5Hnlb_jg5Pjg6vjg4kp!5e0!3m2!1sja!2sjp!4v1716691569907!5m2!1sja!2sjp"
+              width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+
+
+    <!-- フッター -->
+    <footer class="footer">
+      <div class="footer__inner innerWrap">
+        <div class="footer__navWrap">
+          <nav class="footer__nav">
+            <ul class="footer__nav__list">
+              <li class="footer__nav__list__item">
+                <span class="text">不動産事業</span>
+                <ul class="footer__child__list">
+                  <li class="footer__child__list__item"><a href="rental.htm">賃貸事業</a></li>
+                  <li class="footer__child__list__item"><a href="selling.htm">売買事業</a></li>
+                </ul>
+              </li>
+              <li class="footer__nav__list__item">
+                <a href="reform.htm">
+                  <span class="text">リフォーム事業</span>
+                </a>
+              </li>
+              <li class="footer__nav__list__item">
+                <span class="text">その他事業</span>
+                <ul class="footer__child__list">
+                  <li class="footer__child__list__item"><a href="kitchen.htm">レンタルキッチン事業</a></li>
+                  <li class="footer__child__list__item"><a href="retail.htm">小売事業</a></li>
+                  <li class="footer__child__list__item"><a href="lodging.htm">民泊事業</a></li>
+                </ul>
+              </li>
+              <li class="footer__nav__list__item">
+                <span class="text">会社案内</span>
+                <ul class="footer__child__list">
+                  <li class="footer__child__list__item"><a href="message.htm">代表ご挨拶</a></li>
+                  <li class="footer__child__list__item"><a href="company.htm">会社概要</a></li>
+                </ul>
+              </li>
+              <li class="footer__nav__list__item">
+                <a href="link.htm">
+                  <span class="text">リンク</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="footer__info__content">
+            <div class="footer__infoWrap">
+              <div class="footer__logo">
+                <a href="index.htm"><img src="img/common/logo2.png" alt="株式会社近畿ビルド" /></a>
+              </div>
+              <div class="footer__info">
+                <span class="address">大阪府大阪市住吉区杉本１丁目７−１６</span>
+                <span class="tel"><a href="tel:06-6609-0138">TEL:06-6609-0138</a></span>
+                <span class="fax">FAX:06-6609-0136</span>
+                <span class="email"><a
+                    href="mailto:airi-fami@oct.zaq.ne.jp?subject=お問い合わせ"></a>Email:airi-fami@oct.zaq.ne.jp</span>
+              </div>
+            </div>
+            <div class="footer__sns">
+              <span class="icon">
+                <a href="https://instagram.com/kit_chen_ito?igshid=MzRlODBiNWFlZA==" target="_blank">
+                  シェアキッチン【きっちんいと】
+                </a>
+              </span>
+              <span class="icon">
+                <a href="https://www.instagram.com/cogmart.sugimotocho?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                  target="_blank">
+                  こぐまーと杉本町店
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__copyright">
+        <span class="copyright">&copy; 株式会社近畿ビルド</span>
+      </div>
+    </footer>
+
+    <!-- ページトップ -->
+    <span class="pagetop"><a href="#container">PAGE TOP</a></span>
+  </div>
+
+  <!-- 共通スクリプト -->
+  <script src="js/vendor/jquery-3.4.1.min.js"></script>
+  <script src="js/script.js"></script>
+  <!-- 固有スクリプト -->
+  <script src="js/vendor/progressbar.min.js"></script>
+  <script src="js/index.js"></script>
+</body>
+
+</html>
