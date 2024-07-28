@@ -39,7 +39,7 @@
       }
 
       &__item {
-        border-top: 1px solid rgb($color: $primary-color, $alpha: 0.4);
+        border-top: 1px solid rgb($color: $border-color, $alpha: 0.4);
 
         &:first-child {
           border-top: none;

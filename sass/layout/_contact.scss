@@ -1,0 +1,244 @@
+@charset "utf-8";
+@use "../foundation/mixins" as *;
+
+/* ============================================
+// contact
+// ==========================================*/
+.lower-contact {
+  background: $bg-color;
+
+  .l-main {
+    @include mq(pc) {
+      min-height: calc(1080px - 72px - 380px - 34px);
+    }
+  }
+}
+
+.contact {
+  &__inner {
+    max-width: 1180px;
+    padding-top: 48px;
+    padding-bottom: 64px;
+
+    @include mq(sp) {
+      padding-top: 24px;
+      padding-bottom: 32px;
+    }
+  }
+
+  &__content {
+    .form-wrap {
+      margin: 0 16px;
+
+      @include mq(sp) {
+        margin: 0;
+      }
+
+      .text {
+        margin-top: 8px;
+
+        @include mq(sp) {
+          margin-top: 4px;
+        }
+      }
+    }
+
+    .form-ttl {
+      border-bottom: 2px solid $bg-color;
+      color: #a9894a;
+      font-size: 2rem;
+      padding-bottom: 4px;
+    }
+
+    .form-ttl+p {
+      margin-top: 16px;
+    }
+
+    .form-information {
+      border-bottom: 2px solid #aaa;
+      color: #888;
+      font-weight: bold;
+      font-size: 1.8rem;
+      padding-bottom: 5px;
+    }
+
+    .form {
+      margin: 0 auto;
+
+      .title {
+        @include mq(sp) {
+          margin-top: 16px;
+        }
+      }
+    }
+
+    .form-item {
+      align-items: center;
+      display: flex;
+      padding-top: 24px;
+      padding-bottom: 24px;
+      width: 100%;
+
+      @include mq(sp) {
+        padding-top: 8px;
+        padding-bottom: 8px;
+      }
+    }
+
+    .form-item-label {
+      max-width: 200px;
+      letter-spacing: 0.05em;
+      width: 100%;
+      font-weight: 700;
+      line-height: 1.6;
+    }
+
+    .is-msg {
+      margin-top: 8px;
+      margin-bottom: auto;
+
+      @include mq(sp) {
+        margin-top: 0;
+      }
+    }
+
+    .form-item-label {
+
+      &-required,
+      &-any {
+        color: #fff;
+        display: inline-block;
+        font-size: 1.2rem;
+        margin-right: 16px;
+        text-align: center;
+        width: 100%;
+        max-width: 40px;
+        border-radius: 3px;
+
+        @include mq(sp) {
+          font-size: 1rem;
+          margin-right: 8px;
+          max-width: 32px;
+          margin-top: 8px;
+        }
+      }
+
+      &-required {
+        background: #ac4c4c;
+      }
+
+      &-any {
+        background: $third-color;
+      }
+    }
+
+    .form-item-input {
+      background-color: #eaedf2;
+      border: 1px solid #888;
+      max-width: 400px;
+      padding-left: 1rem;
+      width: 100%;
+    }
+
+    .form-item-textarea {
+      background-color: #eaedf2;
+      border: 1px solid #888;
+      flex: 1;
+      height: 120px;
+      padding-left: 1rem;
+      width: 100%;
+
+      @include mq(sp) {
+        margin-top: 8px;
+      }
+    }
+
+    .form-btn {
+      background-color: #ac4c4c;
+      color: #fff;
+      border: 1px solid #ac4c4c;
+      cursor: pointer;
+      display: block;
+      letter-spacing: 0.05em;
+      margin-top: 32px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 8px;
+      padding-bottom: 10px;
+      transition: all 0.3s;
+      width: 280px;
+
+      @include mq(hover) {
+        &:hover {
+          background-color: #fff;
+          color: #ac4c4c;
+        }
+      }
+    }
+
+    .checkbox-input {
+      align-items: center;
+      display: flex;
+      cursor: pointer;
+      margin-right: 8px;
+
+      @include mq(hover) {
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.05);
+        }
+      }
+    }
+
+    .checkbox-input-input {
+      margin: 0;
+      opacity: 0;
+      width: 0;
+
+      &:checked+.checkbox-input-dummy {
+        background-color: #ac4c4c;
+
+        &::before {
+          background: #ffffff;
+          content: "";
+          height: 2px;
+          left: 8px;
+          position: absolute;
+          transform: translate(-6px, 5px) rotateZ(-135deg);
+          top: 4px;
+          width: 6px;
+        }
+
+        &::after {
+          background-color: #ffffff;
+          content: "";
+          display: block;
+          height: 2px;
+          left: 11px;
+          position: absolute;
+          top: 2px;
+          transform: translate(-6px, 5px) rotateZ(-45deg);
+          width: 10px;
+        }
+      }
+    }
+
+    .checkbox-input-dummy {
+      background-color: rgba(0, 0, 0, 0.15);
+      height: 16px;
+      position: relative;
+      transition: all 0.15s linear;
+      width: 16px;
+    }
+
+    .checkbox-input-txt {
+      margin-left: 8px;
+    }
+
+    @include mq(sp) {
+      .form-item {
+        display: block;
+      }
+    }
+
+  }
+}
