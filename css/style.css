@@ -4175,7 +4175,13 @@ th {
   padding-bottom: 10px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  width: 280px;
+  width: 100%;
+  max-width: 280px;
+}
+@media (max-width: 834px) {
+  .contact__content .form-btn {
+    max-width: 200px;
+  }
 }
 @media (hover:hover) {
   .contact__content .form-btn:hover {

@@ -166,7 +166,12 @@
       padding-top: 8px;
       padding-bottom: 10px;
       transition: all 0.3s;
-      width: 280px;
+      width: 100%;
+      max-width: 280px;
+
+      @include mq(sp) {
+        max-width: 200px;
+      }
 
       @include mq(hover) {
         &:hover {
