@@ -2380,7 +2380,7 @@ th {
 }
 @media (max-width: 834px) {
   .sec__business__inner {
-    padding-top: 48px;
+    padding-top: 40px;
   }
 }
 .sec__business .business__content {
@@ -2388,7 +2388,7 @@ th {
 }
 @media (max-width: 834px) {
   .sec__business .business__content {
-    margin-top: 32px;
+    margin-top: 24px;
   }
 }
 .sec__business .business__content .list__item {
@@ -2556,8 +2556,8 @@ th {
 }
 @media (max-width: 834px) {
   .sec__access__inner {
-    padding-top: 48px;
-    padding-bottom: 48px;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 }
 .sec__access .access__content {
@@ -2565,7 +2565,7 @@ th {
 }
 @media (max-width: 834px) {
   .sec__access .access__content {
-    margin-top: 32px;
+    margin-top: 24px;
   }
 }
 .sec__access .access__content .list {
