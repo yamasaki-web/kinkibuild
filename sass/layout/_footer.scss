@@ -69,8 +69,16 @@
       font-weight: 400;
       letter-spacing: 0.075em;
       color: #fff;
+
       @include mq(sp) {
         font-size: 1.4rem;
+      }
+
+      a{
+        @include mq(sp){
+          color:#fff;
+          text-decoration:none;
+        }
       }
     }
   }

@@ -1696,6 +1696,12 @@ th {
     font-size: 1.4rem;
   }
 }
+@media (max-width: 834px) {
+  .footer__info .fax a, .footer__info .email a {
+    color: #fff;
+    text-decoration: none;
+  }
+}
 .footer__sns {
   display: -webkit-box;
   display: -ms-flexbox;
