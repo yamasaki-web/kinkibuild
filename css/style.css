@@ -1700,6 +1700,7 @@ th {
   .footer__info .fax a, .footer__info .email a {
     color: #fff;
     text-decoration: none;
+    pointer-events: none;
   }
 }
 .footer__sns {

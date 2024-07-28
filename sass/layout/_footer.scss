@@ -78,6 +78,7 @@
         @include mq(sp){
           color:#fff;
           text-decoration:none;
+          pointer-events: none;
         }
       }
     }
