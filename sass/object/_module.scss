@@ -92,7 +92,7 @@
         }
 
         @include mq(sp) {
-          font-size: 2.4rem;
+          font-size: 2.2rem;
           font-weight: 700;
         }
       }
@@ -117,7 +117,7 @@
         line-height: 1.6;
         opacity: 0;
         @include mq(sp){
-          font-size: 1.6rem;
+          font-size: 1.5rem;
         }
         &::before{
           content: "";
@@ -252,7 +252,7 @@
     line-height: 1.5;
 
     @include mq(sp) {
-      font-size: 2rem;
+      font-size: 1.8rem;
     }
   }
 }
@@ -262,13 +262,13 @@
   border-bottom: 2px solid $primary-color;
   color: $txt-color;
   font-size: 2.2rem;
-  padding-bottom: 8px;
+  padding-bottom: 4px;
   line-height: 1.6;
   font-weight: 700;
 
   @include mq(sp) {
-    font-size: 1.7rem;
-    padding-bottom: 2px;
+    font-size: 1.6rem;
+    border-bottom: 1px solid $primary-color;
   }
 }
 

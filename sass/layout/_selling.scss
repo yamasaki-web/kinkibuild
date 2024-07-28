@@ -241,6 +241,7 @@
                     background-color: #f5efe2;
                     padding: 4px 24px;
                     text-align: center;
+                    font-weight: 700;
 
                     @include mq(sp) {
                       padding: 2px 24px;
@@ -292,6 +293,7 @@
                     @include mq(sp) {
                       width: 100%;
                       padding: 8px 16px;
+                      border: none;
                     }
                   }
 

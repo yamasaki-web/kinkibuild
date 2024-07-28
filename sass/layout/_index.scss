@@ -203,7 +203,7 @@
               .title {
                 position: relative;
                 font-family: $lato;
-                font-size: 1.8rem;
+                font-size: 2rem;
                 font-weight: 700;
                 letter-spacing: 0.075em;
                 color: $txt-color;
@@ -321,7 +321,7 @@
 
         &__item {
           display: flex;
-          border-top: 1px solid rgb($color: $primary-color, $alpha: 0.4);
+          border-top: 1px solid rgb($color: $border-color, $alpha: 0.4);
           margin-top: 20px;
           padding-top: 16px;
 
@@ -342,7 +342,7 @@
             width: 100%;
             margin-top: 16px;
             color: $primary-color;
-            font-weight: 500;
+            font-weight: 700;
 
             &:first-child {
               margin-top: 0;

@@ -390,12 +390,20 @@ img {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   overflow: hidden;
+  opacity: 0;
 }
 #loading .logo img {
   -webkit-transform: translateY(30px);
           transform: translateY(30px);
   -webkit-transition: 0.3s cubic-bezier(0.92, 0.03, 0.35, 0.94);
   transition: 0.3s cubic-bezier(0.92, 0.03, 0.35, 0.94);
+  aspect-ratio: 477/52;
+  height: 27px;
+}
+@media (max-width: 834px) {
+  #loading .logo img {
+    height: 21px;
+  }
 }
 
 .once #loading {
@@ -403,16 +411,25 @@ img {
   display: -ms-flexbox;
   display: flex;
 }
+.once #loading .logo {
+  opacity: 1;
+}
+.once #loading .logo img {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
 .once.js-loaded #loading::before {
-  height: 0;
-  -webkit-transition-delay: 1.5s;
-          transition-delay: 1.5s;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
 }
 .once.js-loaded #loading .logo img {
   -webkit-transform: translateY(0);
           transform: translateY(0);
-  -webkit-animation: fadeUp-30 0.3s cubic-bezier(0.92, 0.03, 0.35, 0.94) 1.5s forwards;
-          animation: fadeUp-30 0.3s cubic-bezier(0.92, 0.03, 0.35, 0.94) 1.5s forwards;
+  -webkit-animation: fadeUp-30 0.3s cubic-bezier(0.92, 0.03, 0.35, 0.94) 1s forwards;
+          animation: fadeUp-30 0.3s cubic-bezier(0.92, 0.03, 0.35, 0.94) 1s forwards;
 }
 
 @-webkit-keyframes fadeUp-30 {
@@ -576,6 +593,7 @@ img {
           justify-content: center;
   gap: 16px;
   padding: 10px 16px;
+  font-weight: 500;
 }
 .hamburger__menu__nav__list__item .noLink::before {
   content: "";
@@ -1196,7 +1214,7 @@ th {
 }
 @media (max-width: 834px) {
   .pageHeader__inner .pageHeaderTitle .ja {
-    font-size: 2.4rem;
+    font-size: 2.2rem;
     font-weight: 700;
   }
 }
@@ -1230,7 +1248,7 @@ th {
 }
 @media (max-width: 834px) {
   .pageHeader__inner .pageHeaderIntro .title {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
 }
 .pageHeader__inner .pageHeaderIntro .title::before {
@@ -1474,7 +1492,7 @@ th {
 }
 @media (max-width: 834px) {
   .commonTitle01 .ja {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }
 
@@ -1483,14 +1501,14 @@ th {
   border-bottom: 2px solid #a9894a;
   color: #333;
   font-size: 2.2rem;
-  padding-bottom: 8px;
+  padding-bottom: 4px;
   line-height: 1.6;
   font-weight: 700;
 }
 @media (max-width: 834px) {
   .lower-commonTitle01 {
-    font-size: 1.7rem;
-    padding-bottom: 2px;
+    font-size: 1.6rem;
+    border-bottom: 1px solid #a9894a;
   }
 }
 
@@ -2440,7 +2458,7 @@ th {
 .sec__business .business__content .list__item a .textArea .title {
   position: relative;
   font-family: "Lato", sans-serif;
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 700;
   letter-spacing: 0.075em;
   color: #333;
@@ -2556,7 +2574,7 @@ th {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border-top: 1px solid rgba(169, 137, 74, 0.4);
+  border-top: 1px solid rgba(119, 119, 119, 0.4);
   margin-top: 20px;
   padding-top: 16px;
 }
@@ -2580,7 +2598,7 @@ th {
   width: 100%;
   margin-top: 16px;
   color: #a9894a;
-  font-weight: 500;
+  font-weight: 700;
 }
 .sec__access .access__content .list__item .term:first-child {
   margin-top: 0;
@@ -2866,6 +2884,7 @@ th {
   background-color: #f5efe2;
   padding: 4px 24px;
   text-align: center;
+  font-weight: 700;
 }
 @media (max-width: 834px) {
   .lower-rental .rental__content .property__body__content__head .list__item .term {
@@ -2931,6 +2950,7 @@ th {
   .lower-rental .rental__content .property__body__content .detailInfo__table .row .head {
     width: 100%;
     padding: 8px 16px;
+    border: none;
   }
 }
 .lower-rental .rental__content .property__body__content .detailInfo__table .row .data {
@@ -3391,6 +3411,7 @@ th {
   background-color: #f5efe2;
   padding: 4px 24px;
   text-align: center;
+  font-weight: 700;
 }
 @media (max-width: 834px) {
   .lower-selling .selling__content .property__body__content__head .list__item .term {
@@ -3456,6 +3477,7 @@ th {
   .lower-selling .selling__content .property__body__content .detailInfo__table .row .head {
     width: 100%;
     padding: 8px 16px;
+    border: none;
   }
 }
 .lower-selling .selling__content .property__body__content .detailInfo__table .row .data {
@@ -3913,7 +3935,7 @@ th {
   font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "HiraMinProN-W3", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
 }
 .message__content .message__body {
-  margin-top: 32px;
+  margin-top: 16px;
   line-height: 2.6;
   font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "HiraMinProN-W3", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
 }
