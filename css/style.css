@@ -420,8 +420,10 @@ img {
 }
 
 .once.js-loaded #loading::before {
-  -webkit-animation: fadeUp-bg 0.3s cubic-bezier(0.92, 0.03, 0.35, 0.94) 1s forwards;
-          animation: fadeUp-bg 0.3s cubic-bezier(0.92, 0.03, 0.35, 0.94) 1s forwards;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
 }
 .once.js-loaded #loading .logo img {
   -webkit-transform: translateY(-30px);
@@ -449,22 +451,6 @@ img {
   100% {
     -webkit-transform: translateY(-30px);
             transform: translateY(-30px);
-  }
-}
-@-webkit-keyframes fadeUp-bg {
-  0% {
-    height: 100%;
-  }
-  100% {
-    height: 0%;
-  }
-}
-@keyframes fadeUp-bg {
-  0% {
-    height: 100%;
-  }
-  100% {
-    height: 0%;
   }
 }
 /* ============================================

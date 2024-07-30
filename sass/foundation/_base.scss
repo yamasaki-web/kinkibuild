@@ -376,14 +376,13 @@ img {
 
 .once.js-loaded #loading {
   &::before {
-    // transform: translateY(-100%);
-    // transition-delay: 1s;
-    animation: fadeUp-bg 0.3s cubic-bezier(.92,.03,.35,.94) 1s forwards;
+    transform: translateY(-100%);
+    transition-delay: 1s;
+    // animation: fadeUp-bg 0.3s cubic-bezier(.92,.03,.35,.94) 1s forwards;
   }
   .logo{
     img{
       transform: translateY(-30px);
-      // animation: fadeUp-30 0.3s cubic-bezier(.92,.03,.35,.94) 1s forwards;
       transition-delay: 0.3s;
     }
   }
@@ -398,14 +397,14 @@ img {
   }
 }
 
-@keyframes fadeUp-bg {
-  0%{
-    height: 100%;
-  }
-  100%{
-    height: 0%;
-  }
-}
+// @keyframes fadeUp-bg {
+//   0%{
+//     height: 100%;
+//   }
+//   100%{
+//     height: 0%;
+//   }
+// }
 
 /* ============================================
 // hamburger
