@@ -2165,7 +2165,7 @@ th {
 }
 .mainVisual__copy .mainCopy,
 .mainVisual__copy .subCopy {
-  text-shadow: 0 0 8px #333;
+  text-shadow: 0 0 24px #333, 0 0 24px #333, 0 0 4px #333;
   color: #fff;
 }
 .mainVisual__copy .mainCopy {
@@ -2373,14 +2373,17 @@ th {
   business
 --------------------*/
 .sec__business {
-  background: #f5efe2;
+  background: -webkit-gradient(linear, left top, right top, color-stop(70%, rgb(245, 239, 226)), to(rgb(255, 255, 255)));
+  background: linear-gradient(90deg, rgb(245, 239, 226) 70%, rgb(255, 255, 255) 100%);
 }
 .sec__business__inner {
   padding-top: 96px;
+  padding-bottom: 96px;
 }
 @media (max-width: 834px) {
   .sec__business__inner {
     padding-top: 40px;
+    padding-bottom: 40px;
   }
 }
 .sec__business .business__content {
@@ -2545,18 +2548,53 @@ th {
 }
 
 /*--------------------
+  ticker
+--------------------*/
+.ticker {
+  background: -webkit-gradient(linear, left top, right top, color-stop(70%, rgb(245, 239, 226)), to(rgb(255, 255, 255)));
+  background: linear-gradient(90deg, rgb(245, 239, 226) 70%, rgb(255, 255, 255) 100%);
+}
+.ticker__text .text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 8rem;
+  margin-right: 64px;
+  line-height: 1;
+}
+@media (max-width: 834px) {
+  .ticker__text .text {
+    font-size: 3.6rem;
+    margin-right: 24px;
+  }
+}
+.ticker__text .text .initial--first {
+  color: #a9894a;
+  background: -webkit-gradient(linear, left top, right top, color-stop(30%, #a9894a), to(rgba(169, 137, 74, 0.5)));
+  background: linear-gradient(90deg, #a9894a 30%, rgba(169, 137, 74, 0.5) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.ticker__text .text .initial--second {
+  color: #8B0000;
+  background: -webkit-gradient(linear, left top, right top, color-stop(30%, darkred), to(rgba(139, 0, 0, 0.3)));
+  background: linear-gradient(90deg, darkred 30%, rgba(139, 0, 0, 0.3) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/*--------------------
   access
 --------------------*/
 .sec__access {
-  background: #f5efe2;
+  background: -webkit-gradient(linear, left top, right top, color-stop(70%, rgb(245, 239, 226)), to(rgb(255, 255, 255)));
+  background: linear-gradient(90deg, rgb(245, 239, 226) 70%, rgb(255, 255, 255) 100%);
 }
 .sec__access__inner {
-  padding-top: 96px;
+  padding-top: 64px;
   padding-bottom: 80px;
 }
 @media (max-width: 834px) {
   .sec__access__inner {
-    padding-top: 40px;
+    padding-top: 24px;
     padding-bottom: 40px;
   }
 }
@@ -2620,7 +2658,8 @@ th {
 // rental
 // ==========================================*/
 .lower-rental {
-  background: #f5efe2;
+  background: -webkit-gradient(linear, left top, right top, color-stop(70%, rgb(245, 239, 226)), to(rgb(255, 255, 255)));
+  background: linear-gradient(90deg, rgb(245, 239, 226) 70%, rgb(255, 255, 255) 100%);
 }
 @media (min-width: 835px) {
   .lower-rental .l-main {
@@ -3147,7 +3186,8 @@ th {
 // selling
 // ==========================================*/
 .lower-selling {
-  background: #f5efe2;
+  background: -webkit-gradient(linear, left top, right top, color-stop(70%, rgb(245, 239, 226)), to(rgb(255, 255, 255)));
+  background: linear-gradient(90deg, rgb(245, 239, 226) 70%, rgb(255, 255, 255) 100%);
 }
 @media (min-width: 835px) {
   .lower-selling .l-main {
@@ -3674,7 +3714,8 @@ th {
 // reform
 // ==========================================*/
 .lower-reform {
-  background: #f5efe2;
+  background: -webkit-gradient(linear, left top, right top, color-stop(70%, rgb(245, 239, 226)), to(rgb(255, 255, 255)));
+  background: linear-gradient(90deg, rgb(245, 239, 226) 70%, rgb(255, 255, 255) 100%);
 }
 @media (min-width: 835px) {
   .lower-reform .l-main {
@@ -3720,7 +3761,8 @@ th {
 // kitchen
 // ==========================================*/
 .lower-kitchen {
-  background: #f5efe2;
+  background: -webkit-gradient(linear, left top, right top, color-stop(70%, rgb(245, 239, 226)), to(rgb(255, 255, 255)));
+  background: linear-gradient(90deg, rgb(245, 239, 226) 70%, rgb(255, 255, 255) 100%);
 }
 @media (min-width: 835px) {
   .lower-kitchen .l-main {
@@ -3766,7 +3808,8 @@ th {
 // retail
 // ==========================================*/
 .lower-retail {
-  background: #f5efe2;
+  background: -webkit-gradient(linear, left top, right top, color-stop(70%, rgb(245, 239, 226)), to(rgb(255, 255, 255)));
+  background: linear-gradient(90deg, rgb(245, 239, 226) 70%, rgb(255, 255, 255) 100%);
 }
 @media (min-width: 835px) {
   .lower-retail .l-main {
@@ -3812,7 +3855,8 @@ th {
 // lodging
 // ==========================================*/
 .lower-lodging {
-  background: #f5efe2;
+  background: -webkit-gradient(linear, left top, right top, color-stop(70%, rgb(245, 239, 226)), to(rgb(255, 255, 255)));
+  background: linear-gradient(90deg, rgb(245, 239, 226) 70%, rgb(255, 255, 255) 100%);
 }
 @media (min-width: 835px) {
   .lower-lodging .l-main {
@@ -3858,7 +3902,8 @@ th {
 // company
 // ==========================================*/
 .lower-company {
-  background: #f5efe2;
+  background: -webkit-gradient(linear, left top, right top, color-stop(70%, rgb(245, 239, 226)), to(rgb(255, 255, 255)));
+  background: linear-gradient(90deg, rgb(245, 239, 226) 70%, rgb(255, 255, 255) 100%);
 }
 @media (min-width: 835px) {
   .lower-company .l-main {
@@ -3919,7 +3964,8 @@ th {
 // message
 // ==========================================*/
 .lower-message {
-  background: #f5efe2;
+  background: -webkit-gradient(linear, left top, right top, color-stop(70%, rgb(245, 239, 226)), to(rgb(255, 255, 255)));
+  background: linear-gradient(90deg, rgb(245, 239, 226) 70%, rgb(255, 255, 255) 100%);
 }
 @media (min-width: 835px) {
   .lower-message .l-main {
@@ -3945,6 +3991,7 @@ th {
   margin-top: 16px;
   line-height: 2.6;
   font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "HiraMinProN-W3", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+  color: #000;
 }
 .message__content .message__body .name {
   font-size: 1.8rem;
@@ -3965,7 +4012,8 @@ th {
 // link
 // ==========================================*/
 .lower-link {
-  background: #f5efe2;
+  background: -webkit-gradient(linear, left top, right top, color-stop(70%, rgb(245, 239, 226)), to(rgb(255, 255, 255)));
+  background: linear-gradient(90deg, rgb(245, 239, 226) 70%, rgb(255, 255, 255) 100%);
 }
 @media (min-width: 835px) {
   .lower-link .l-main {
@@ -4023,7 +4071,8 @@ th {
 // contact
 // ==========================================*/
 .lower-contact {
-  background: #f5efe2;
+  background: -webkit-gradient(linear, left top, right top, color-stop(70%, rgb(245, 239, 226)), to(rgb(255, 255, 255)));
+  background: linear-gradient(90deg, rgb(245, 239, 226) 70%, rgb(255, 255, 255) 100%);
 }
 @media (min-width: 835px) {
   .lower-contact .l-main {
@@ -4140,14 +4189,14 @@ th {
   background: #696969;
 }
 .contact__content .form-item-input {
-  background-color: #eaedf2;
+  background-color: #fff;
   border: 1px solid #888;
   max-width: 400px;
   padding-left: 1rem;
   width: 100%;
 }
 .contact__content .form-item-textarea {
-  background-color: #eaedf2;
+  background-color: #fff;
   border: 1px solid #888;
   -webkit-box-flex: 1;
       -ms-flex: 1;

@@ -5,7 +5,7 @@
 // contact
 // ==========================================*/
 .lower-contact {
-  background: $bg-color;
+  background: linear-gradient(90deg, rgba(245,239,226,1) 70%, rgba(255,255,255,1) 100%);
 
   .l-main {
     @include mq(pc) {
@@ -133,7 +133,7 @@
     }
 
     .form-item-input {
-      background-color: #eaedf2;
+      background-color: #fff;
       border: 1px solid #888;
       max-width: 400px;
       padding-left: 1rem;
@@ -141,7 +141,7 @@
     }
 
     .form-item-textarea {
-      background-color: #eaedf2;
+      background-color: #fff;
       border: 1px solid #888;
       flex: 1;
       height: 120px;
