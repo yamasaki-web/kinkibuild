@@ -30,7 +30,7 @@
 
     .mainCopy,
     .subCopy {
-      text-shadow: 0 0 24px #333, 0 0 24px #333, 0 0 4px #333;
+      text-shadow: 0 0 24px #111, 0 0 4px #111;
       color: #fff;
     }
 
@@ -271,7 +271,7 @@
                     color: $primary-color;
 
                     &::after {
-                      transform: scale(1, 1);
+                      transform: scale(1, 0.9);
                     }
                   }
                 }

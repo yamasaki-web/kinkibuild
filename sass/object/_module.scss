@@ -37,10 +37,11 @@
       min-height: 160px;
     }
 
-    .pageHeader__content{
+    .pageHeader__content {
       max-width: 1280px;
       padding: 80px 40px;
-      @include mq(sp){
+
+      @include mq(sp) {
         padding: 40px 6.25%;
       }
     }
@@ -58,9 +59,11 @@
       flex-direction: column;
       align-items: center;
       gap: 8px;
-        @include mq(sp) {
-          gap: 4px;
-        }
+
+      @include mq(sp) {
+        gap: 4px;
+      }
+
       .eng {
         display: flex;
         justify-content: center;
@@ -77,6 +80,7 @@
           font-size: 1.3rem;
         }
       }
+
       .ja {
         font-family: "Lato", sans-serif;
         font-size: 3.2rem;
@@ -98,28 +102,31 @@
       }
     }
 
-    .pageHeaderIntro{
+    .pageHeaderIntro {
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 16px;
       margin-top: 48px;
-      @include mq(sp){
+
+      @include mq(sp) {
         margin-top: 24px;
         gap: 24px;
       }
 
-      .title{
+      .title {
         position: relative;
         font-size: 2rem;
         font-weight: 500;
         letter-spacing: 0.075em;
         line-height: 1.6;
         opacity: 0;
-        @include mq(sp){
+
+        @include mq(sp) {
           font-size: 1.5rem;
         }
-        &::before{
+
+        &::before {
           content: "";
           display: block;
           position: absolute;
@@ -129,23 +136,29 @@
           background: $primary-color;
           width: 80px;
           aspect-ratio: 80/1;
-          @include mq(sp){
+
+          @include mq(sp) {
             bottom: -14px;
           }
         }
       }
-      .lead{
+
+      .lead {
         opacity: 0;
+        color: #111;
       }
     }
   }
-  &.-business{
+
+  &.-business {
     &::before {
       background: rgb(255 255 255/0.8);
     }
-    .pageHeader__inner{
+
+    .pageHeader__inner {
       min-height: 480px;
-      @include mq(sp){
+
+      @include mq(sp) {
         min-height: 304px;
       }
     }
@@ -172,9 +185,15 @@
           animation: -fadeLeft 800ms cubic-bezier(0.14, 1, 0.34, 1) 0.6s forwards;
         }
       }
-      .pageHeaderIntro{
-        .title{animation: -fadeup  800ms cubic-bezier(0.14, 1, 0.34, 1) 1.4s forwards;}
-        .lead{animation: -fadeup  800ms cubic-bezier(0.14, 1, 0.34, 1) 1.6s forwards;}
+
+      .pageHeaderIntro {
+        .title {
+          animation: -fadeup 800ms cubic-bezier(0.14, 1, 0.34, 1) 1.4s forwards;
+        }
+
+        .lead {
+          animation: -fadeup 800ms cubic-bezier(0.14, 1, 0.34, 1) 1.6s forwards;
+        }
       }
     }
   }
@@ -248,8 +267,11 @@
     font-size: 3rem;
     font-weight: 700;
     letter-spacing: 0.075em;
-    color: $txt-color;
+    // color: $txt-color;
     line-height: 1.5;
+    background: linear-gradient(0deg, #111 0, #777 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 
     @include mq(sp) {
       font-size: 1.8rem;
@@ -258,17 +280,31 @@
 }
 
 .lower-commonTitle01 {
-  font-family: "lota";
-  border-bottom: 2px solid $primary-color;
-  color: $txt-color;
+  position: relative;
+  // border-bottom: 2px solid $primary-color;
+  // color: $txt-color;
   font-size: 2.2rem;
   padding-bottom: 4px;
   line-height: 1.6;
   font-weight: 700;
+  background: linear-gradient(0deg, #111 0, #777 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 
   @include mq(sp) {
     font-size: 1.6rem;
     border-bottom: 1px solid $primary-color;
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-image: linear-gradient(90deg, rgba(139, 0, 0, 1) 4%, rgba(169, 137, 74, 1) 20% 90%);
   }
 }
 
