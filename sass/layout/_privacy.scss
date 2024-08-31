@@ -1,0 +1,310 @@
+@charset "utf-8";
+@use "../foundation/mixins" as *;
+
+/* ============================================
+// privacy
+// ==========================================*/
+.lower-privacy {
+  background: linear-gradient(90deg, rgba(245,239,226,1) 70%, rgba(255,255,255,1) 100%);
+
+  .l-main {
+    @include mq(pc) {
+      min-height: calc(1080px - 72px - 380px - 34px);
+    }
+  }
+}
+
+.privacy {
+  &__inner {
+      padding-top: 48px;
+    padding-bottom: 64px;
+
+    @include mq(sp) {
+      padding-top: 24px;
+      padding-bottom: 32px;
+    }
+  }
+
+  .privacy__container {
+    position: relative;
+    .privacy__inner {
+      .privacy {
+        .lead{
+          margin-top: 16px;
+        }
+        &__list {
+          background: #fff;
+          counter-reset: number;
+          padding: 40px 56px;
+          margin-top: 32px;
+          @include mq(sp) {
+            padding: 16px 24px;
+          }
+          &__item {
+            position: relative;
+            padding: 32px 0 35px;
+            @include mq(sp) {
+              padding: 16px 0 20px;
+            }
+            &:first-child {
+              padding-top: 0;
+            }
+            &:last-child {
+              padding-bottom: 0;
+              .teamWrap {
+                &::after {
+                  content: none;
+                }
+              }
+            }
+            .teamWrap {
+              &::after {
+                content: "";
+                width: 100%;
+                height: 1px;
+                position: absolute;
+                background-image: linear-gradient(
+                  to right,
+                  $border-color,
+                  $border-color,
+                  1px,
+                  transparent 1px
+                );
+                background-size: 3px 1px;
+                background-position: left bottom;
+                background-repeat: repeat-x;
+                bottom: 0;
+              }
+              .team {
+                font-weight: bold;
+                padding-left: 1.3em;
+                text-indent: -1.3em;
+                &::before {
+                  counter-increment: number;
+                  content: counter(number) ".";
+                  color:$secondary-color;
+                  margin-right: 4px;
+                }
+              }
+              .desc {
+                padding-left: 21px;
+                @include mq(sp) {
+                  padding-left: 19px;
+                }
+              }
+            }
+            &:nth-child(12n + 1) {
+              &::before {
+                content: "";
+                position: absolute;
+                right: -240px;
+                top: -20px;
+                background: url(../img/common/cloud02.png) center center /
+                  contain no-repeat;
+                width: 161px;
+                aspect-ratio: 161/93;
+                z-index: -1;
+                @include mq(sp) {
+                  content: none;
+                }
+              }
+              &::after {
+                content: "";
+                position: absolute;
+                right: -240px;
+                top: -80px;
+                background: url(../img/common/illust_balloon01.png) center
+                  center / contain no-repeat;
+                width: 83px;
+                aspect-ratio: 92/184;
+                z-index: -1;
+                @include mq(sp) {
+                  content: none;
+                }
+              }
+            }
+            &:nth-child(12n + 3) {
+              &::before {
+                content: "";
+                position: absolute;
+                left: -260px;
+                top: -20px;
+                background: url(../img/common/cloud01.png) center center /
+                  contain no-repeat;
+                width: 161px;
+                aspect-ratio: 161/93;
+                z-index: -1;
+                @include mq(sp) {
+                  content: none;
+                }
+              }
+            }
+            &:nth-child(12n + 5) {
+              &::before {
+                content: "";
+                position: absolute;
+                right: -260px;
+                top: 10px;
+                background: url(../img/common/cloud01.png) center center /
+                  contain no-repeat;
+                width: 161px;
+                aspect-ratio: 161/93;
+                z-index: -1;
+                @include mq(sp) {
+                  content: none;
+                }
+              }
+            }
+            &:nth-child(12n + 7) {
+              &::before {
+                content: "";
+                position: absolute;
+                left: -240px;
+                top: -20px;
+                background: url(../img/common/cloud01.png) center center /
+                  contain no-repeat;
+                width: 161px;
+                aspect-ratio: 161/93;
+                z-index: -1;
+                @include mq(sp) {
+                  content: none;
+                }
+              }
+              &::after {
+                content: "";
+                position: absolute;
+                left: -240px;
+                top: -60px;
+                background: url(../img/common/illust_balloon02.png) center
+                  center / contain no-repeat;
+                width: 75px;
+                aspect-ratio: 69/135;
+                z-index: -1;
+                @include mq(sp) {
+                  content: none;
+                }
+              }
+            }
+            &:nth-child(12n + 8) {
+              &::before {
+                content: "";
+                position: absolute;
+                right: -230px;
+                bottom: -110px;
+                background: url(../img/common/cloud02.png) center center /
+                  contain no-repeat;
+                width: 161px;
+                aspect-ratio: 161/93;
+                z-index: -1;
+                @include mq(sp) {
+                  content: none;
+                }
+              }
+            }
+            &:nth-child(12n + 10) {
+              &::before {
+                content: "";
+                position: absolute;
+                left: -260px;
+                bottom: -90px;
+                background: url(../img/common/cloud01.png) center center /
+                  contain no-repeat;
+                width: 161px;
+                aspect-ratio: 161/93;
+                z-index: -1;
+                @include mq(sp) {
+                  content: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .notice__container {
+    position: relative;
+    .lead{
+      margin-top: 16px;
+}
+    .notice__inner {
+      .notice {
+          &__list {
+            background: #fff;
+            padding: 56px 80px 60px;
+            margin-top: 32px;
+            @include mq(sp) {
+              padding: 16px 24px;
+            }
+            &__item {
+              &:nth-child(n + 2) {
+                margin-top: 48px;
+                @include mq(sp) {
+                  margin-top: 32px;
+                }
+              }
+              .team {
+                position: relative;
+                font-size: 1.6rem;
+                font-weight: bold;
+                letter-spacing: 0.075em;
+                color: $primary-color;
+                padding-left: 1.6em;
+                margin-bottom: 10px;
+                @include mq(sp) {
+                  font-size: 1.5rem;
+                }
+                &::before {
+                  content: "";
+                  position: absolute;
+                  left: 0;
+                  top: 0.65em;
+                  width: 0.85em;
+                  aspect-ratio: 1/1;
+                  background: $primary-color;
+                  border-radius: 50%;
+                }
+                &::after {
+                  content: "";
+                  position: absolute;
+                  top: 0.9em;
+                  left: 0.25em;
+                  width: 0.35em;
+                  aspect-ratio: 1/1;
+                  background: #fff;
+                  border-radius: 50%;
+                }
+              }
+              .desc {
+                position: relative;
+                &::before {
+                  content: "";
+                  width: 100%;
+                  height: 2px;
+                  position: absolute;
+                  left: 0;
+                  background-image: linear-gradient(
+                    to right,
+                    $border-color,
+                    $border-color,
+                    2px,
+                    transparent 2px
+                  );
+                  background-size: 6px 2px;
+                  background-position: left top;
+                  background-repeat: repeat-x;
+                }
+                &__text {
+                  padding-top: 16px;
+                  @include mq(sp) {
+                    padding-top: 8px;
+                  }
+                }
+              }
+            }
+          }
+      }
+    }
+  }
+}

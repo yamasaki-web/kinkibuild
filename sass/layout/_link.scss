@@ -5,7 +5,7 @@
 // link
 // ==========================================*/
 .lower-link {
-  background: linear-gradient(90deg, rgba(245,239,226,1) 70%, rgba(255,255,255,1) 100%);
+  background: linear-gradient(90deg, rgba(245, 239, 226, 1) 70%, rgba(255, 255, 255, 1) 100%);
 
   .l-main {
     @include mq(pc) {
@@ -62,6 +62,13 @@
 
           @include mq(sp) {
             padding: 8px 0;
+          }
+
+          @include mq(hover) {
+            &:hover {
+              opacity: 1;
+              color: $primary-color;
+            }
           }
         }
       }

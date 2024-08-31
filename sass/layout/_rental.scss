@@ -28,8 +28,8 @@
     &__content {
       .property {
         background: #fff;
-        padding: 24px 32px;
-        margin-top: 24px;
+        padding: 40px 4%;
+        margin-top: 32px;
 
         @include mq(sp) {
           padding: 24px 4.25%;

@@ -1,0 +1,77 @@
+@charset "utf-8";
+@use "../foundation/mixins" as *;
+
+/* ============================================
+// 404 notfound
+// ==========================================*/
+.lower-notfound {
+  background: linear-gradient(90deg, rgba(245, 239, 226, 1) 70%, rgba(255, 255, 255, 1) 100%);
+
+  .l-main {
+    @include mq(pc) {
+      min-height: calc(1080px - 72px - 40px - 135px);
+    }
+  }
+
+
+  .notFound {
+    &__inner {
+      padding-top: 104px;
+      padding-bottom: 64px;
+
+      @include mq(sp) {
+        padding-top: 24px;
+        padding-bottom: 32px;
+      }
+    }
+
+    &__content {
+      .title{
+        font-family: $lato;
+        font-size: 10rem;
+        font-weight: 700;
+        line-height: 1;
+        display: flex;
+        justify-content: center;
+      }
+      .eng{
+        font-size: 4rem;
+        font-weight: 600;
+        color: $primary-color;
+        line-height: 1;
+        display: flex;
+        justify-content: center;
+        margin-top: 16px;
+      }
+      .text{
+        display: flex;
+        justify-content: center;
+        margin-top: 24px;
+      }
+      .toTopLink{
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+        .toTop{
+          border: 1px solid $primary-color;
+    width: 100%;
+    max-width: 240px;
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: $primary-color;
+    color: #fff;
+    border-radius: 3px;
+    @include mq(hover) {
+    &:hover {
+    background: #fff;
+    color: $primary-color;
+    }
+    }
+        }
+      }
+    }
+  }
+
+}
