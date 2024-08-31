@@ -218,7 +218,10 @@
 
     &__bottom{
       background: #2a2a2a;
-      padding: 10px 0;
+      padding: 24px 0;
+      @include mq(sp){
+        padding: 16px 0;
+      }
       &__inner{
       display: flex;
       align-items: center;
@@ -228,11 +231,16 @@
         font-size: 1.2rem;
       }
       .privacy{
+        line-height: 1;
+        padding-bottom: 6px;
         a{
           .text{
             color: #fff;
         font-size: 1.2rem;
         border-bottom: 1px solid #fff;
+        @include mq(sp){
+        font-size: 1.1rem;
+        }
           }
         }
       }

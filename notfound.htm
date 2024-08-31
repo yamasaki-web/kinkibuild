@@ -59,7 +59,7 @@
   <link rel="stylesheet" href="css/add.css" />
 </head>
 
-<body class="lower-link">
+<body class="lower-notfound">
 
   <!-- ハンバーガーメニュー -->
   <div class="hamburger__btn -hamburger">
@@ -246,141 +246,27 @@
       </div>
     </header>
 
-    <!-- ページヘッダー -->
-    <div class="pageHeader">
-      <div class="pageHeader__inner">
-        <div class="pageHeaderImg">
-          <img src="img/contact/page_header_bg.jpg" alt="マンションの写真" class="ofi">
-        </div>
-        <div class="pageHeaderTitle">
-          <span class="eng">CONTACT</span>
-          <h2 class="ja split">お問い合わせ</h2>
-        </div>
-      </div>
-    </div>
-
     <main class="l-main">
 
-      <!-- お問い合わせ -->
-      <section class="contact">
-        <div class="contact__inner innerWrap">
-          <div class="contact__content anime -fadeInBottom">
-              <div class="form-wrap">
-                <h3 class="title lower-commonTitle01">お問い合わせフォーム</h3>
-                  <p class="text">以下のフォームに必要事項をご入力の上、「送信する」ボタンを押してください。</p>
-                  <form class="form" action="send_mail.php" method="post">
-                      <div class="form-item">
-                          <p class="form-item-label is-msg">お問い合わせ内容</p>
-                          <p class="form-item-label-required is-msg">必須</p>
-                          <textarea class="form-item-textarea" name="message" placeholder="内容を入力してください。"></textarea>
-                      </div>
-                      <h3 class="title lower-commonTitle01">お客様情報</h3>
-                      <div class="form-item">
-                          <p class="form-item-label">お名前</p>
-                          <p class="form-item-label-required">必須</p>
-                          <input type="text" class="form-item-input" name="name" placeholder="山田 太郎">
-                      </div>
-                      <div class="form-item">
-                          <p class="form-item-label">フリガナ</p>
-                          <p class="form-item-label-required">必須</p>
-                          <input type="text" class="form-item-input" name="furigana" placeholder="ヤマダ タロウ">
-                      </div>
-                      <div class="form-item">
-                          <p class="form-item-label">メールアドレス</p>
-                          <p class="form-item-label-required">必須</p>
-                          <input type="email" class="form-item-input" name="email" placeholder="user@example.ne.jp">
-                      </div>
-                      <div class="form-item">
-                          <p class="form-item-label">電話番号<br>（ハイフン不要）</p>
-                          <p class="form-item-label-any">任意</p>
-                          <input type="tel" class="form-item-input" name="phone" placeholder="0123456789（半角数字）">
-                      </div>
-                      <input type="submit" class="form-btn" value="送信する">
-                  </form>
-              </div>
+      <!-- 404 not found -->
+      <section class="notFound">
+        <div class="notFound__inner innerWrap">
+          <div class="notFound__content">
+            <h2 class="title">404</h2>
+            <div class="eng"><span>Not&nbsp;Found</span></div>
+            <p class="text">申し訳ございません。<br class="pcCont">
+              お探しのページが見つかりませんでした。<br class="pcCont">
+              アクセスしようとしたページは削除、変更されたか、現在利用できない可能性があります。<br class="pcCont">
+            お手数ですが、上記メニューバーから目的のページをお探しください。</p>
+            <div class="toTopLink">
+              <a href="index.htm" class="toTop">トップページに戻る</a>
+            </div>
           </div>
         </div>
       </section>
     </main>
-
-    <!-- パンくず -->
-    <div class="breadcrumb">
-      <ol class="breadcrumb__list">
-        <li class="breadcrumb__list__item">
-          <a href="index.htm"><span>株式会社近畿ビルド TOP</span></a>
-        </li>
-        <li class="breadcrumb__list__item">リンク</li>
-      </ol>
-    </div>
     <!-- フッター -->
     <footer class="footer">
-      <div class="footer__inner innerWrap">
-        <div class="footer__navWrap">
-          <nav class="footer__nav">
-            <ul class="footer__nav__list">
-              <li class="footer__nav__list__item">
-                <span class="text">不動産事業</span>
-                <ul class="footer__child__list">
-                  <li class="footer__child__list__item"><a href="rental.htm">賃貸事業</a></li>
-                  <li class="footer__child__list__item"><a href="selling.htm">売買事業</a></li>
-                </ul>
-              </li>
-              <li class="footer__nav__list__item">
-                <a href="reform.htm">
-                  <span class="text">リフォーム事業</span>
-                </a>
-              </li>
-              <li class="footer__nav__list__item">
-                <span class="text">その他事業</span>
-                <ul class="footer__child__list">
-                  <li class="footer__child__list__item"><a href="kitchen.htm">レンタルキッチン事業</a></li>
-                  <li class="footer__child__list__item"><a href="retail.htm">小売事業</a></li>
-                  <li class="footer__child__list__item"><a href="lodging.htm">民泊事業</a></li>
-                </ul>
-              </li>
-              <li class="footer__nav__list__item">
-                <span class="text">会社案内</span>
-                <ul class="footer__child__list">
-                  <li class="footer__child__list__item"><a href="message.htm">代表ご挨拶</a></li>
-                  <li class="footer__child__list__item"><a href="company.htm">会社概要</a></li>
-                </ul>
-              </li>
-              <li class="footer__nav__list__item">
-                <a href="link.htm">
-                  <span class="text">リンク</span>
-                </a>
-              </li>
-            </ul>
-          </nav>
-          <div class="footer__info__content">
-            <div class="footer__infoWrap">
-              <div class="footer__logo">
-                <a href="index.htm"><img src="img/common/logo2.png" alt="株式会社近畿ビルド" /></a>
-              </div>
-              <div class="footer__info">
-                <span class="address">大阪府大阪市住吉区杉本１丁目７−１６</span>
-                <span class="tel"><a href="tel:06-6609-0138">TEL:06-6609-0138</a></span>
-                <span class="fax">FAX:06-6609-0136</span>
-                <span class="email"><a
-                    href="mailto:airi-fami@oct.zaq.ne.jp?subject=お問い合わせ"></a>Email:airi-fami@oct.zaq.ne.jp</span>
-              </div>
-            </div>
-            <div class="footer__sns">
-              <span class="icon">
-                <a href="https://instagram.com/kit_chen_ito?igshid=MzRlODBiNWFlZA==" target="_blank">
-                  シェアキッチン【きっちんいと】
-                </a>
-              </span>
-              <span class="icon">
-                <a href="https://www.instagram.com/cogmart.sugimotocho?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                  target="_blank">
-                  こぐまーと杉本町店
-                </a>
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
       <div class="footer__bottom">
         <div class="footer__bottom__inner innerWrap">
           <div class="copyright">

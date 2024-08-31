@@ -50,61 +50,103 @@
   /*----------------------------------------------------
 		ページトップ フッター上で止める
 	-----------------------------------------------------*/
+  // function pagetopStop() {
+  //   const documentHeight = $(document).height();
+  //   const scrollPosition = $(this).height() + $(this).scrollTop();
+  //   const footerHeight = $(".footer__copyright").innerHeight();
+  //   const Target = $(".pagetop");
+  //   const isMediaPC = window.matchMedia("(min-width: 835px)").matches;
+  //   // const fixedConvertionHeight = $(".fixed_convertion").innerHeight();
+  //   const isLowerKyujinD = $("body").hasClass("lower-kyujin_d"); // Check if body has class 'lower-kyujin_d'
+
+  //   // 通常ページ
+  //   if (isMediaPC) {
+  //     // PC表示の時の処理
+  //     if (documentHeight - scrollPosition <= footerHeight) {
+  //       if (isLowerKyujinD) {
+  //         Target.css({
+  //           position: "absolute",
+  //           bottom: footerHeight + 100, // Adjusted bottom value for lower-kyujin_d class
+  //         });
+  //       } else {
+  //         Target.css({
+  //           position: "absolute",
+  //           bottom: footerHeight + 48,
+  //         });
+  //       }
+  //     } else {
+  //       Target.css({
+  //         position: "fixed",
+  //         bottom: isLowerKyujinD ? 110 : 35, // 40 when isLowerKyujinD is true, otherwise 32
+  //       });
+  //     }
+  //   } else {
+  //     // スマホ表示の時の処理
+  //     if (documentHeight - scrollPosition <= footerHeight) {
+  //       if (isLowerKyujinD) {
+  //         Target.css({
+  //           position: "absolute",
+  //           bottom: footerHeight + 100, // Adjusted bottom value for lower-kyujin_d class
+  //         });
+  //       } else {
+  //         Target.css({
+  //           position: "absolute",
+  //           bottom: footerHeight + 32,
+  //         });
+  //       }
+  //     } else {
+  //       Target.css({
+  //         position: "fixed",
+  //         bottom: isLowerKyujinD ? 40 : 40, // 40 when isLowerKyujinD is true, otherwise 16
+  //       });
+  //     }
+  //   }
+  // }
+  // $(window).scroll(function () {
+  //   pagetopStop();
+  // });
+
   function pagetopStop() {
     const documentHeight = $(document).height();
     const scrollPosition = $(this).height() + $(this).scrollTop();
-    const footerHeight = $(".footer__copyright").innerHeight();
+    const footerHeight = $(".footer__bottom").innerHeight();
     const Target = $(".pagetop");
     const isMediaPC = window.matchMedia("(min-width: 835px)").matches;
-    // const fixedConvertionHeight = $(".fixed_convertion").innerHeight();
-    const isLowerKyujinD = $("body").hasClass("lower-kyujin_d"); // Check if body has class 'lower-kyujin_d'
 
     // 通常ページ
     if (isMediaPC) {
       // PC表示の時の処理
       if (documentHeight - scrollPosition <= footerHeight) {
-        if (isLowerKyujinD) {
-          Target.css({
-            position: "absolute",
-            bottom: footerHeight + 100, // Adjusted bottom value for lower-kyujin_d class
-          });
-        } else {
-          Target.css({
-            position: "absolute",
-            bottom: footerHeight + 48,
-          });
-        }
+        Target.css({
+          position: "absolute",
+          bottom: footerHeight + 48,
+        });
       } else {
         Target.css({
           position: "fixed",
-          bottom: isLowerKyujinD ? 110 : 35, // 40 when isLowerKyujinD is true, otherwise 32
+          bottom: 64,
         });
       }
     } else {
       // スマホ表示の時の処理
       if (documentHeight - scrollPosition <= footerHeight) {
-        if (isLowerKyujinD) {
-          Target.css({
-            position: "absolute",
-            bottom: footerHeight + 100, // Adjusted bottom value for lower-kyujin_d class
-          });
-        } else {
-          Target.css({
-            position: "absolute",
-            bottom: footerHeight + 32,
-          });
-        }
+        Target.css({
+          position: "absolute",
+          bottom: footerHeight + 32,
+        });
       } else {
         Target.css({
           position: "fixed",
-          bottom: isLowerKyujinD ? 40 : 40, // 40 when isLowerKyujinD is true, otherwise 16
+          bottom: 40,
         });
       }
     }
   }
+
   $(window).scroll(function () {
     pagetopStop();
   });
+
 
   /*-------------------------------
 		aのクリックイベント
