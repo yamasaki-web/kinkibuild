@@ -1480,7 +1480,7 @@ th {
 }
 @media (max-width: 834px) {
   .commonTitle01 .eng {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
 }
 .commonTitle01 .ja {
@@ -1496,14 +1496,14 @@ th {
 }
 @media (max-width: 834px) {
   .commonTitle01 .ja {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
   }
 }
 
 .lower-commonTitle01 {
   position: relative;
   font-size: 2.4rem;
-  padding-bottom: 4px;
+  padding-bottom: 8px;
   line-height: 1.6;
   font-weight: 700;
   background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #111), to(#777));
@@ -4471,39 +4471,40 @@ th {
 .privacy .privacy__container {
   position: relative;
 }
-.privacy .privacy__container .privacy__inner .privacy .lead {
+.privacy .privacy__container .privacy .lead {
   margin-top: 16px;
 }
-.privacy .privacy__container .privacy__inner .privacy__list {
+.privacy .privacy__container .privacy__list {
   background: #fff;
   counter-reset: number;
   padding: 40px 56px;
   margin-top: 32px;
 }
 @media (max-width: 834px) {
-  .privacy .privacy__container .privacy__inner .privacy__list {
-    padding: 16px 24px;
+  .privacy .privacy__container .privacy__list {
+    padding: 24px 5%;
+    margin-top: 24px;
   }
 }
-.privacy .privacy__container .privacy__inner .privacy__list__item {
+.privacy .privacy__container .privacy__list__item {
   position: relative;
   padding: 32px 0 35px;
 }
 @media (max-width: 834px) {
-  .privacy .privacy__container .privacy__inner .privacy__list__item {
+  .privacy .privacy__container .privacy__list__item {
     padding: 16px 0 20px;
   }
 }
-.privacy .privacy__container .privacy__inner .privacy__list__item:first-child {
+.privacy .privacy__container .privacy__list__item:first-child {
   padding-top: 0;
 }
-.privacy .privacy__container .privacy__inner .privacy__list__item:last-child {
+.privacy .privacy__container .privacy__list__item:last-child {
   padding-bottom: 0;
 }
-.privacy .privacy__container .privacy__inner .privacy__list__item:last-child .teamWrap::after {
+.privacy .privacy__container .privacy__list__item:last-child .teamWrap::after {
   content: none;
 }
-.privacy .privacy__container .privacy__inner .privacy__list__item .teamWrap::after {
+.privacy .privacy__container .privacy__list__item .teamWrap::after {
   content: "";
   width: 100%;
   height: 1px;
@@ -4514,26 +4515,28 @@ th {
   background-repeat: repeat-x;
   bottom: 0;
 }
-.privacy .privacy__container .privacy__inner .privacy__list__item .teamWrap .team {
+.privacy .privacy__container .privacy__list__item .teamWrap .team {
   font-weight: bold;
   padding-left: 1.3em;
   text-indent: -1.3em;
 }
-.privacy .privacy__container .privacy__inner .privacy__list__item .teamWrap .team::before {
+.privacy .privacy__container .privacy__list__item .teamWrap .team::before {
   counter-increment: number;
   content: counter(number) ".";
   color: #8B0000;
   margin-right: 4px;
 }
-.privacy .privacy__container .privacy__inner .privacy__list__item .teamWrap .desc {
+.privacy .privacy__container .privacy__list__item .teamWrap .desc {
   padding-left: 21px;
+  margin-top: 8px;
 }
 @media (max-width: 834px) {
-  .privacy .privacy__container .privacy__inner .privacy__list__item .teamWrap .desc {
+  .privacy .privacy__container .privacy__list__item .teamWrap .desc {
     padding-left: 19px;
+    margin-top: 4px;
   }
 }
-.privacy .privacy__container .privacy__inner .privacy__list__item:nth-child(12n+1)::before {
+.privacy .privacy__container .privacy__list__item:nth-child(12n+1)::before {
   content: "";
   position: absolute;
   right: -240px;
@@ -4544,11 +4547,11 @@ th {
   z-index: -1;
 }
 @media (max-width: 834px) {
-  .privacy .privacy__container .privacy__inner .privacy__list__item:nth-child(12n+1)::before {
+  .privacy .privacy__container .privacy__list__item:nth-child(12n+1)::before {
     content: none;
   }
 }
-.privacy .privacy__container .privacy__inner .privacy__list__item:nth-child(12n+1)::after {
+.privacy .privacy__container .privacy__list__item:nth-child(12n+1)::after {
   content: "";
   position: absolute;
   right: -240px;
@@ -4559,11 +4562,11 @@ th {
   z-index: -1;
 }
 @media (max-width: 834px) {
-  .privacy .privacy__container .privacy__inner .privacy__list__item:nth-child(12n+1)::after {
+  .privacy .privacy__container .privacy__list__item:nth-child(12n+1)::after {
     content: none;
   }
 }
-.privacy .privacy__container .privacy__inner .privacy__list__item:nth-child(12n+3)::before {
+.privacy .privacy__container .privacy__list__item:nth-child(12n+3)::before {
   content: "";
   position: absolute;
   left: -260px;
@@ -4574,11 +4577,11 @@ th {
   z-index: -1;
 }
 @media (max-width: 834px) {
-  .privacy .privacy__container .privacy__inner .privacy__list__item:nth-child(12n+3)::before {
+  .privacy .privacy__container .privacy__list__item:nth-child(12n+3)::before {
     content: none;
   }
 }
-.privacy .privacy__container .privacy__inner .privacy__list__item:nth-child(12n+5)::before {
+.privacy .privacy__container .privacy__list__item:nth-child(12n+5)::before {
   content: "";
   position: absolute;
   right: -260px;
@@ -4589,11 +4592,11 @@ th {
   z-index: -1;
 }
 @media (max-width: 834px) {
-  .privacy .privacy__container .privacy__inner .privacy__list__item:nth-child(12n+5)::before {
+  .privacy .privacy__container .privacy__list__item:nth-child(12n+5)::before {
     content: none;
   }
 }
-.privacy .privacy__container .privacy__inner .privacy__list__item:nth-child(12n+7)::before {
+.privacy .privacy__container .privacy__list__item:nth-child(12n+7)::before {
   content: "";
   position: absolute;
   left: -240px;
@@ -4604,11 +4607,11 @@ th {
   z-index: -1;
 }
 @media (max-width: 834px) {
-  .privacy .privacy__container .privacy__inner .privacy__list__item:nth-child(12n+7)::before {
+  .privacy .privacy__container .privacy__list__item:nth-child(12n+7)::before {
     content: none;
   }
 }
-.privacy .privacy__container .privacy__inner .privacy__list__item:nth-child(12n+7)::after {
+.privacy .privacy__container .privacy__list__item:nth-child(12n+7)::after {
   content: "";
   position: absolute;
   left: -240px;
@@ -4619,11 +4622,11 @@ th {
   z-index: -1;
 }
 @media (max-width: 834px) {
-  .privacy .privacy__container .privacy__inner .privacy__list__item:nth-child(12n+7)::after {
+  .privacy .privacy__container .privacy__list__item:nth-child(12n+7)::after {
     content: none;
   }
 }
-.privacy .privacy__container .privacy__inner .privacy__list__item:nth-child(12n+8)::before {
+.privacy .privacy__container .privacy__list__item:nth-child(12n+8)::before {
   content: "";
   position: absolute;
   right: -230px;
@@ -4634,11 +4637,11 @@ th {
   z-index: -1;
 }
 @media (max-width: 834px) {
-  .privacy .privacy__container .privacy__inner .privacy__list__item:nth-child(12n+8)::before {
+  .privacy .privacy__container .privacy__list__item:nth-child(12n+8)::before {
     content: none;
   }
 }
-.privacy .privacy__container .privacy__inner .privacy__list__item:nth-child(12n+10)::before {
+.privacy .privacy__container .privacy__list__item:nth-child(12n+10)::before {
   content: "";
   position: absolute;
   left: -260px;
@@ -4649,35 +4652,42 @@ th {
   z-index: -1;
 }
 @media (max-width: 834px) {
-  .privacy .privacy__container .privacy__inner .privacy__list__item:nth-child(12n+10)::before {
+  .privacy .privacy__container .privacy__list__item:nth-child(12n+10)::before {
     content: none;
   }
 }
 .privacy .notice__container {
   position: relative;
+  margin-top: 72px;
+}
+@media (max-width: 834px) {
+  .privacy .notice__container {
+    margin-top: 32px;
+  }
 }
 .privacy .notice__container .lead {
   margin-top: 16px;
 }
-.privacy .notice__container .notice__inner .notice__list {
+.privacy .notice__container .notice__list {
   background: #fff;
-  padding: 56px 80px 60px;
+  padding: 40px 56px;
   margin-top: 32px;
 }
 @media (max-width: 834px) {
-  .privacy .notice__container .notice__inner .notice__list {
-    padding: 16px 24px;
+  .privacy .notice__container .notice__list {
+    margin-top: 24px;
+    padding: 24px 5%;
   }
 }
-.privacy .notice__container .notice__inner .notice__list__item:nth-child(n+2) {
+.privacy .notice__container .notice__list__item:nth-child(n+2) {
   margin-top: 48px;
 }
 @media (max-width: 834px) {
-  .privacy .notice__container .notice__inner .notice__list__item:nth-child(n+2) {
+  .privacy .notice__container .notice__list__item:nth-child(n+2) {
     margin-top: 32px;
   }
 }
-.privacy .notice__container .notice__inner .notice__list__item .team {
+.privacy .notice__container .notice__list__item .team {
   position: relative;
   font-size: 1.6rem;
   font-weight: bold;
@@ -4687,11 +4697,12 @@ th {
   margin-bottom: 10px;
 }
 @media (max-width: 834px) {
-  .privacy .notice__container .notice__inner .notice__list__item .team {
+  .privacy .notice__container .notice__list__item .team {
     font-size: 1.5rem;
+    margin-bottom: 6px;
   }
 }
-.privacy .notice__container .notice__inner .notice__list__item .team::before {
+.privacy .notice__container .notice__list__item .team::before {
   content: "";
   position: absolute;
   left: 0;
@@ -4701,7 +4712,7 @@ th {
   background: #a9894a;
   border-radius: 50%;
 }
-.privacy .notice__container .notice__inner .notice__list__item .team::after {
+.privacy .notice__container .notice__list__item .team::after {
   content: "";
   position: absolute;
   top: 0.9em;
@@ -4711,10 +4722,10 @@ th {
   background: #fff;
   border-radius: 50%;
 }
-.privacy .notice__container .notice__inner .notice__list__item .desc {
+.privacy .notice__container .notice__list__item .desc {
   position: relative;
 }
-.privacy .notice__container .notice__inner .notice__list__item .desc::before {
+.privacy .notice__container .notice__list__item .desc::before {
   content: "";
   width: 100%;
   height: 2px;
@@ -4725,11 +4736,11 @@ th {
   background-position: left top;
   background-repeat: repeat-x;
 }
-.privacy .notice__container .notice__inner .notice__list__item .desc__text {
+.privacy .notice__container .notice__list__item .desc__text {
   padding-top: 16px;
 }
 @media (max-width: 834px) {
-  .privacy .notice__container .notice__inner .notice__list__item .desc__text {
+  .privacy .notice__container .notice__list__item .desc__text {
     padding-top: 8px;
   }
 }/*# sourceMappingURL=style.css.map */
